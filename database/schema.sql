@@ -3,6 +3,7 @@ USE allyApp;
 CREATE TABLE books(
   title VARCHAR(350) NOT NULL,
   author VARCHAR(250),
+  genre VARCHAR(250),
   link1 VARCHAR(2000),
   link2 VARCHAR(2000)
   );
