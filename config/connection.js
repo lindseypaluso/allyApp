@@ -1,13 +1,4 @@
-const mysql = require("mysql2");
-const Sequelize = require('sequelize');
-
-const sequelize = new Sequelize("database", "username", "password", {
-    host: "localhost",
-    dialect: "mysql",
-    database: "allyApp",
-    username: "root",
-    password: "root"
-});
+var mysql = require("mysql");
 
 var connection = mysql.createConnection({
 	host: "localhost",
@@ -26,6 +17,5 @@ connection.connect(function(err) {
 });
 
 module.exports = connection;
-module.exports = sequelize;
 
 // Not sure if this is correct. Still working on this file.
