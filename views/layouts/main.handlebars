@@ -3,12 +3,59 @@
 
 <head>
   <meta charset="utf-8">
+  <!--Link to bootstrap-->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!--Link to personal styling-->
   <link rel="stylesheet" href="/styles/styles.css" media="screen" title="no title" charset="utf-8">
-  <title>Home Page</title>
+  <!--Link to google fonts-->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <!--tab display-->
+  <title>Ally App</title>
+  <!--js files-->
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="/js/index.js"></script>
 </head>
 
 <body>
+  <header>
+    <!--Ally App logo will display on far left of every page-->
+    <!--NavBar will display on every page (left justify)-->
+    <nav class="navbar navbar-expand-md">
+        <div class="container-fluid">
+            <!--Ally App Logo?-->
+            <div id="logo" class="text-dark">
+                <h1>The</h1>
+                <h1>Ally</h1>
+                <h1 class="text-secondary">App</h1>
+            </div>
+            <div id="collapsed-navbar text-secondary">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="text-secondary navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item active"><a href="#" class="text-white nav-link active">Home<span class="sr-only">(current)</span></a></li>
+                        <li class="nav-item"><a href="#" class="text-white nav-link">Library</a></li>
+                        <li class="nav-item"><a href="#" class="text-white nav-link">Get Involved</a></li>
+                        <li class="nav-item"><a href="#" class="text-white nav-link">Portfolio</a></li>
+                        <li class="nav-item"><a href="#" class="text-white nav-link">Need Help?</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div id="search-container">
+              <!--Search bar will display on every page (right justify)-->
+              <form action="#">
+                <input type="text" placeholder="Search" name="search">
+                <button type="submit"><i class="fa fa-search"></i></button>
+              </form>
+            </div>
+            
+            <!--Avatar img displays in far right corner-->
+            <img class="user-avatar" src="">
+        </div>
+    </nav>
+  </header>
   {{{body}}}
 </body>
 

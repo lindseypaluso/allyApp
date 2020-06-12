@@ -1,5 +1,5 @@
 //this is where the js & jQuery will process requests for the library page
-//Planning on using https://www.w3schools.com/bootstrap/bootstrap_filters.asp
+//Planning on using https://www.w3schools.com/howto/howto_js_filter_elements.asp
 filterSelection("all")
 function filterSelection(c) {
   var x, i;
