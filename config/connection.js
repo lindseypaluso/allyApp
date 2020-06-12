@@ -1,21 +1,17 @@
-var mysql = require("mysql");
+// Dependencies
+var Sequelize = require("sequelize");
 
-var connection = mysql.createConnection({
-	host: "localhost",
-	port: 8889,
-	user: "root",
-	password: "root",
-	database: "allyApp"
-});
-
-connection.connect(function(err) {
-    if (err) {
-        console.error("Error connecting: " + err.stack);
-        return;
+// Creates mySQL connection using Sequelize, the empty string in the third argument spot is our password.
+var sequelize = new Sequelize("allyApp", "root", "root", {
+    host: "localhost",
+    port: 8889,
+    dialect: "mysql",
+    pool: {
+        max: 15,
+        min: 0,
+        idle: 10000
     }
-    console.log("Connected as ID " + connection.threadId);
 });
 
-module.exports = connection;
-
-// Not sure if this is correct. Still working on this file.
+// Exports the connection for other files to use
+module.exports = sequelize;
