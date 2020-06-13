@@ -93,7 +93,20 @@ a:hover {
 #fists {
   width: 100%;
 }
-
+/* .carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+    width: 70%;
+    margin: auto;
+} */
+.carousel-caption h3:hover {
+  border-bottom: solid;
+  border-bottom-color: gray;
+}
+.media-img {
+  width: 100%;
+  margin: auto;
+  text-align: center;
+}
 /*====================================== LIBRARY page styling====================================== */
 .lib-btn {
   font-size: 13pt;
@@ -102,6 +115,17 @@ a:hover {
   border-bottom: solid;
   border-bottom-color: gray;
 }
+.filterDiv {
+  display: none;
+  float: left;
+}
+.show {
+  display: block;
+}
+.hide {
+  display: none;
+}
+
 
 /* When the screen is less than 600px wide, stack the links and the search field vertically instead of horizontally */
 @media screen and (max-width: 600px) {

@@ -1,34 +1,95 @@
 <div id="home">
-  <img src="./home.png" alt="fists" id="fists"/>
-  <div class="container">
-    <div class="row">
-      <div class="col-8 offset-2">
-        <h1>{{msg}}</h1>
-        <h2>This is our Home Page!</h2>
-        <form class="clearfix mb-4" action="POST">
-          <div class="form-group">
-            <label for="example-text">Example Text</label>
-            <input type="text" id="example-text" class="form-control" aria-describedby="example-text" placeholder="Enter Example Text">
-          </div>
-          <div class="form-group">
-            <label for="example-description">Example Description</label>
-            <textarea class="form-control" id="example-description" aria-describedby="example-description" placeholder="Enter Example Description"></textarea>
-          </div>
-          <button id="submit" class="btn btn-primary float-right">Submit</button>
-        </form>
-        <h3>Examples:</h3>
-        <ul id="example-list" class="list-group">
-          {{#each examples}}
-          <li data-id="{{this.id}}" class="list-group-item">
-            <a href="example/{{this.id}}">{{this.text}}</a>
-            <button class="btn btn-danger float-right delete">ｘ</button>
-          </li>
-          {{/each}}
-        </ul>
+    <!--Initial section with image-->
+  <img src="./home.png" alt="fists" id="fists" />
+  <br>
+  <br>
+  <div class="main container">
+    <div class="mission-statement">
+      <h2>The mission of Ally App is to promote the well-being of communities by connecting organizations and
+          individuals in combating racial inequalities and prejudice and by providing organizations and
+          individuals with resources to protect themselves and their loved ones.</h2>
+    </div>
+    <br>
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+        <li data-target="#myCarousel" data-slide-to="3"></li>
+      </ol>
+
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner" role="listbox">
+
+        <div class="carousel-item active" data-pause="false">
+          <a href="https://www.dosomething.org/us/articles/explained-the-protests-for-racial-justice">
+              <img src="https://images.ctfassets.net/81iqaqpfd8fy/g7KjlSrChrhb00qWuPMcV/343278c4428f0a39f7dfe543b5201e2a/rapid_response_editorial_header.png?h=620&w=1440"
+                  alt="protest" class="d-block w-100">
+              <div class="carousel-caption text-white">
+                  <h3>EXPLAINED: THE PROTESTS FOR RACIAL JUSTICE</h3>
+                  <p>What’s happening and, more importantly, why.</p>
+              </div>
+          </a>
+        </div>
+
+        <div class="carousel-item">
+          <a href="https://www.dosomething.org/us/articles/black-lives-taken">
+              <img src="https://images.ctfassets.net/81iqaqpfd8fy/1SDBDhULfP8y6LQdYyzc39/1cb2faca5c538a63f3d868000df21824/rapid_response-05.png?h=620&w=1440"
+                  alt="Black Deaths" class="d-block w-100">
+              <div class="carousel-caption text-white">
+                  <h3>BLACK LIVES TAKEN: GEORGE FLOYD, BREONNA TAYLOR, AND AHMAUD ARBERY</h3>
+                  <p>What's happening and what you can do.</p>
+              </div>
+          </a>
+        </div>
+
+        <div class="carousel-item">
+          <a href="https://www.dosomething.org/us/facts/11-facts-about-racial-discrimination">
+              <img src="https://images.ctfassets.net/81iqaqpfd8fy/73DcCVqNGrT1Gg5msXU2zk/50285a84c2b177107bdc53d674afc06c/GettyImages-1042424400.jpg?h=620&w=1440"
+                  alt="Black Teen" class="d-block w-100">
+              <div class="carousel-caption text-white">
+                  <h3>11 FACTS ABOUT RACIAL DISCRIMINATION</h3>
+                  <p>And what you can do about it.</p>
+              </div>
+          </a>
+        </div>
+
+        <div class="carousel-item">
+          <a href="https://www.deseret.com/opinion/2020/6/13/21289587/black-lives-matter-protests-racism-children-resources">
+              <img src="https://cdn.vox-cdn.com/thumbor/2UrFxUIzm1oTuM8kh0kg-W-WOxA=/0x0:4100x2795/920x613/filters:focal(1722x1070:2378x1726):format(webp)/cdn.vox-cdn.com/uploads/chorus_image/image/66930814/BLM_Protest_0610_ja_0437.0.jpg"
+                  alt="Utah Protest" class="d-block w-100">
+              <div class="carousel-caption text-white">
+                  <h3>Opinion: Parents shouldn’t shy away from discussing racism with their children</h3>
+              </div>
+          </a>
+        </div>
       </div>
+
+      <!-- Left and right controls -->
+      <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
     </div>
   </div>
+    
 </div>
-
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!--js files-->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+    crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 <script src="/js/index.js"></script>

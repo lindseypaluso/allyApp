@@ -1,25 +1,46 @@
 //this is where the js & jQuery will process requests for the library page
 //Planning on using https://www.w3schools.com/howto/howto_js_filter_elements.asp
+$(".lib-btn").on("click", function() {
+  var selector = $(this).data("filter");
+  console.log(selector);
+  filterSelection(selector);
+});
+
 filterSelection("all")
 function filterSelection(c) {
   var x, i;
-  x = document.getElementsByClassName("filterDiv");
+  x = document.getElementsByClassName("filterDiv") ;
+
+  console.log(x);
   if (c == "all") c = "";
   for (i = 0; i < x.length; i++) {
-    removeClass(x[i], "show");
+    console.log(x[i]);
+    if (x[i].dataset.category == c) {
+      addClass(x[i], "show");
+    } else {
+      x[i].classList.remove("show");
+    }
+    if (c == "all" || c == "") {
+      addClass(x[i], "show");
+    };
     if (x[i].className.indexOf(c) > -1) addClass(x[i], "show");
   }
+  console.log("working");
 }
 
+// Show filtered elements
 function addClass(element, name) {
     var i, arr1, arr2;
     arr1 = element.className.split(" ");
     arr2 = name.split(" ");
     for (i = 0; i < arr2.length; i++) {
-      if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+      if (arr1.indexOf(arr2[i]) == -1) {
+        element.className += " " + arr2[i];
+      }
     }
 }
 
+// Hide elements that are not selected
 function removeClass(element, name) {
     var i, arr1, arr2;
     arr1 = element.className.split(" ");
