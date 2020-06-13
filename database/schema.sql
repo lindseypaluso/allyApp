@@ -6,38 +6,29 @@ CREATE TABLE books(
   genre VARCHAR(250),
   link1 VARCHAR(2000),
   link2 VARCHAR(2000)
-  );
+);
   
-  CREATE TABLE childrensBooks(
+CREATE TABLE childrensBooks(
   title VARCHAR(350) NOT NULL,
   author VARCHAR(250),
   link1 VARCHAR(2000),
   link2 VARCHAR(2000)
-  );
+);
   
   CREATE TABLE podcasts(
   title VARCHAR(350) NOT NULL,
   link1 VARCHAR(2000),
-  link2 VARCHAR(2000)
-  );
+  link2 VARCHAR(2000)å
+);
   
-  CREATE TABLE articles(
+CREATE TABLE articles(
   title VARCHAR(350) NOT NULL,
   author VARCHAR(250),
   link VARCHAR(2000)
-  );
+);
   
-  CREATE TABLE toWatch_long(
+CREATE TABLE toWatch(
   title VARCHAR(350) NOT NULL,
   streaming_service VARCHAR(150),
   link VARCHAR(2000)
-  );
-  
-  CREATE TABLE toWatch_short(
-  title VARCHAR(350) NOT NULL,
-  streaming_service VARCHAR(150),
-  link VARCHAR(2000)
-  );
-  
-
-
+);
