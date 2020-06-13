@@ -93,7 +93,20 @@ a:hover {
 #fists {
   width: 100%;
 }
-
+/* .carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+    width: 70%;
+    margin: auto;
+} */
+.carousel-caption h3:hover {
+  border-bottom: solid;
+  border-bottom-color: gray;
+}
+.media-img {
+  width: 100%;
+  margin: auto;
+  text-align: center;
+}
 /*====================================== LIBRARY page styling====================================== */
 .lib-btn {
   font-size: 13pt;
