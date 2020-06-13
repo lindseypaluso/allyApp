@@ -1,12 +1,8 @@
-var Sequelize = require("sequelize");
-var sequelize = require("../config/connection.js");
-
-var toWatch = sequelize.define("toWatch_short", {
-    title: Sequelize.STRING,
-    description: Sequelize.STRING,
-    link: Sequelize.STRING
-});
-
-toWatch.sync();
-
-module.exports(toWatch);
+module.exports = function(sequelize, DataTypes) {
+    var ToWatch = sequelize.define("ToWatch", {
+        title: DataTypes.STRING,
+        streaming_service: DataTypes.STRING,
+        link: DataTypes.STRING
+    });
+    return ToWatch;
+};
