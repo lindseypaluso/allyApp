@@ -2,28 +2,34 @@
   line-height: 2.5;
 }
 body {
-  background-color: ghostwhite;
+  background-color: whitesmoke;
+  color: gray;
+  font-family: 'Montserrat', sans-serif;
 }
+#logo {
+  font-family: 'Montserrat', sans-serif;
+}
+h4 {line-height: 0.8;}
 /*======================================Navbar/Header styling======================================*/
 /* actually only need this image on the home page
   header {
   background-image: url(../img/fists.png);
-  font-family: 'Montserrat', sans-serif;
+  
 } */
+
 .navbar {
   overflow: hidden;
-  background-color: #e9e9e9;
 }
 .navbar a {
   float: left;
   display: block;
   color: darkgray;
   text-align: center;
-  padding: 14px 16px;
+
   text-decoration: none;
   font-size: 17px;
 }
-.navbar a:hover {
+a:hover {
   border-bottom: solid;
   border-bottom-color: gray;
 }
@@ -32,45 +38,70 @@ body {
   color: black;
   font-style: bold;
 }
-.topnav .search-container {
-  float: right;
-}
 /* Style the search box inside the navigation bar */
-.navbar input[type=text] {
+.navbar .search-container {
   float: right;
+  position: absolute;
+  
+}
+.navbar input[type=text] {
+  /* float: right; */
   padding: 6px;
-  border: none;
-  border-radius: 20%;
   margin-top: 8px;
   margin-right: 16px;
+  font-size: 17px;
+  border-radius: 25%;
+  border: none;
+  width: 120px;
+}
+.nav-link {
+  float: left;
+  display: block;
+  color: darkgray;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
   font-size: 17px;
 }
-.topnav .search-container button {
-  float: right;
-  padding: 6px 10px;
-  margin-top: 8px;
-  margin-right: 16px;
+#search-button {
+  box-sizing: content-box;
+  margin-top: 6px;
+  width: 20px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  border-radius: 50%;
+  font-size: 18px; 
   background: #ddd;
-  font-size: 17px;
   border: none;
   cursor: pointer;
 }
-.topnav .search-container button:hover {
-  background: #ccc;
-}
-.user-avatar {
-  background-size: 32px 32px;
-  border: 0;
-  border-radius: 50%;
-  display: block;
-  margin: 0;
+.user-avatar-div {
+  box-sizing: content-box;
+  background-color: gray;
   position: relative;
-  height: 32px;
-  width: 32px;
-  z-index: 0;
-  background-color: white;
+  padding-left: 4px;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  border-radius: 50%;
+  font-size: 18px; 
 }
-/*====================================== END Navbar/Header styling======================================*/
+
+/*====================================== HOME page styling====================================== */
+#fists {
+  width: 100%;
+}
+
+/*====================================== LIBRARY page styling====================================== */
+.lib-btn {
+  font-size: 13pt;
+}
+#filter-menu button:hover {
+  border-bottom: solid;
+  border-bottom-color: gray;
+}
 
 /* When the screen is less than 600px wide, stack the links and the search field vertically instead of horizontally */
 @media screen and (max-width: 600px) {
