@@ -27,13 +27,7 @@ CREATE TABLE articles(
   link VARCHAR(2000)
 );
   
-CREATE TABLE toWatch_long(
-  title VARCHAR(350) NOT NULL,
-  streaming_service VARCHAR(150),
-  link VARCHAR(2000)
-);
-  
-CREATE TABLE toWatch_short(
+CREATE TABLE toWatch(
   title VARCHAR(350) NOT NULL,
   streaming_service VARCHAR(150),
   link VARCHAR(2000)
