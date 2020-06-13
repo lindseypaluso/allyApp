@@ -1,14 +1,10 @@
-var Sequelize = require("sequelize");
-var sequelize = require("../config/connection.js");
-
-var books = sequelize.define("books", {
-  title: Sequelize.STRING,
-  author: Sequelize.STRING,
-  genre: Sequelize.STRING,
-  link1: Sequelize.STRING,
-  link2: Sequelize.STRING
-});
-
-books.sync();
-
-module.exports = books;
+module.exports = function(sequelize, DataTypes) {
+    var Books = sequelize.define("books", {
+        title: DataTypes.STRING,
+        author: DataTypes.STRING,
+        genre: DataTypes.STRING,
+        link1: DataTypes.STRING,
+        link2: DataTypes.STRING
+    });
+    return Books;
+};
