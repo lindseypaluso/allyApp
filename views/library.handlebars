@@ -2,37 +2,37 @@
     <h1>Library</h1>
     <!--Planning on using https://www.w3schools.com/bootstrap/bootstrap_filters.asp to apply jQuery filter-->
     <div id="filter-menu">
-            <div class="row ">
-                <div class="col-3">
-                    <button class="btn lib-btn text-secondary active" onclick="filterSelection('all')"> Show all</button>
-                </div>
-                <div class="col-3">
-                    <button class="btn lib-btn text-secondary" onclick="filterSelection('books')"> Books</button>                
-                </div>
-                <div class="col-3">
-                    <button class="btn lib-btn text-secondary" onclick="filterSelection('childrensBooks')"> Childrens Books</button>
-                </div>
-                <div class="col-3">
-                    <button class="btn lib-btn text-secondary" onclick="filterSelection('podcasts')"> Podcasts</button>
-                </div>
+        <div class="row ">
+            <div class="col-3">
+                <button class="btn lib-btn text-secondary active" data-filter="0"> Show all</button>
             </div>
-            <div class="row">
-                <div class="col-3">
-                    <button class="btn lib-btn text-secondary" onclick="filterSelection('articles')"> Articles</button>
-                </div>
-                <div class="col-3">
-                    <button class="btn lib-btn text-secondary" onclick="filterSelection('films')"> Films</button>
-                </div>
-                <div class="col-3">
-                    <button class="btn lib-btn text-secondary" onclick="filterSelection('shortFilms')"> Short Films</button>
-                </div>
-                <div class="col-3">
-                    <button class="btn lib-btn text-secondary" onclick="filterSelection('userRecs')"> User Recommendations</button>
-                </div>
+            <div class="col-3">
+                <button class="btn lib-btn text-secondary" data-filter="1"> Books</button>                
+            </div>
+            <div class="col-3">
+                <button class="btn lib-btn text-secondary" data-filter="2"> Childrens Books</button>
+            </div>
+            <div class="col-3">
+                <button class="btn lib-btn text-secondary" data-filter="3"> Podcasts</button>
             </div>
         </div>
-        <br>
-        <br>
+        <div class="row">
+            <div class="col-3">
+                <button class="btn lib-btn text-secondary" data-filter="4"> Articles</button>
+            </div>
+            <div class="col-3">
+                <button class="btn lib-btn text-secondary" data-filter="5"> Films</button>
+            </div>
+            <div class="col-3">
+                <button class="btn lib-btn text-secondary" data-filter="6"> Short Films</button>
+            </div>
+            <div class="col-3">
+                <button class="btn lib-btn text-secondary" data-filter="7"> User Recommendations</button>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
     <div class="container library-content">
         <div id="filter-container" class="row">
             <div class="col-lg-4 col-md-6 filterDiv books" data-category="1" data-sort="value">
