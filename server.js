@@ -1,4 +1,5 @@
 var express = require("express");
+var exphbs = require("express-handlebars");
 var db = require("./models");
 
 var app = express();
@@ -12,10 +13,12 @@ app.use(express.json());
 app.use(express.static("public"));
 
 // Add handlebars
+app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+app.set("view engine", "handlebars");
 
 // Routes
 // =============================================================
-require("./controllers/articles_controller.js")(app);
+require("./controllers/library_controller.js")(app);
 
 // Syncing our sequelize models and then starting our Express app
 // =============================================================
