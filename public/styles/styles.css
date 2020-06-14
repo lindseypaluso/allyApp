@@ -2,7 +2,7 @@
   line-height: 2.5;
 }
 body {
-  background-color: whitesmoke;
+  background-color: white;
   color: gray;
   font-family: 'Montserrat', sans-serif;
 }
@@ -88,11 +88,10 @@ a:hover {
   border-radius: 50%;
   font-size: 18px; 
 }
-
-/*====================================== HOME page styling====================================== */
 #fists {
   width: 100%;
 }
+/*====================================== HOME page styling====================================== */
 /* .carousel-inner > .item > img,
   .carousel-inner > .item > a > img {
     width: 70%;
@@ -106,6 +105,12 @@ a:hover {
   width: 100%;
   margin: auto;
   text-align: center;
+}
+#myCarousel {
+  margin-bottom: 100px;
+}
+#myCarousel h3 {
+  font-weight: bolder;
 }
 /*====================================== LIBRARY page styling====================================== */
 .lib-btn {
@@ -125,7 +130,22 @@ a:hover {
 .hide {
   display: none;
 }
-
+.filterDiv .item img {
+  height: 50%;
+  margin-bottom: 10px;
+}
+.filterDiv .item {
+  margin-bottom: 30px;
+  background-color: whitesmoke;
+  padding: 20px;
+  border: none;
+  border-radius: 5%;
+}
+.filterDiv a {
+  text-decoration: none;
+  font-size: 17px;
+  color: darkgray;
+}
 
 /* When the screen is less than 600px wide, stack the links and the search field vertically instead of horizontally */
 @media screen and (max-width: 600px) {
