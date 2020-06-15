@@ -5,23 +5,17 @@ var db = require("../models");
 module.exports = function(app) {
     // GET route to get all the help requests
     app.get("/api/needhelp", function(req, res) {
-<<<<<<< HEAD
-        db.//model name of db for need help page
-        .findAll({}).then(function(data) {
-=======
         db.Help.findAll({}).then(function(data) {
->>>>>>> 541cd1770efc1a1f7572ede7ff698b7c749c4c45
             res.json(data);
         });
     });
 
     // POST route to save help requests
     app.post("/api/needhelp", function(req, res) {
-        db.//model name of db for need help page
-        .create({
-          subject: req.body.subject,
-          body: req.body.body
-          //Any other columns?
+        db.Help.create({
+          title: req.body.title,
+          body: req.body.body,
+          userId: req.body.userId
         }).then(function(data) {
           res.json(data);
         });
@@ -29,8 +23,7 @@ module.exports = function(app) {
 
     // DELETE route to delete help requests
     app.delete("/api/needhelp/:id", function(req, res) {
-        db.//model name of db for need help page
-        .destroy({
+        db.Help.destroy({
           where: {
             id: req.params.id
           }
@@ -41,8 +34,7 @@ module.exports = function(app) {
 
     // PUT route to update help requests
     app.put("/api/needhelp", function(req, res) {
-        db.//model name of db for need help pag
-        .update({
+        db.Help.update({
           subject: req.body.subject,
           body: req.body.body
           //Any other columns?
