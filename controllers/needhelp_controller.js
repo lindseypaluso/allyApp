@@ -5,12 +5,7 @@ var db = require("../models");
 module.exports = function(app) {
     // GET route to get all the help requests
     app.get("/api/needhelp", function(req, res) {
-<<<<<<< HEAD
-        db.//model name of db for need help page
-        .findAll({}).then(function(data) {
-=======
         db.Help.findAll({}).then(function(data) {
->>>>>>> 541cd1770efc1a1f7572ede7ff698b7c749c4c45
             res.json(data);
         });
     });

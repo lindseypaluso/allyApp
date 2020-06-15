@@ -1,13 +1,4 @@
-<<<<<<< HEAD
-node_modules
-node_modules/*
-.DS_Store
-.env
-config/config.json
-=======
 .DS_Store
 .env
 node_modules
 node_modules/*
-config/*
->>>>>>> 541cd1770efc1a1f7572ede7ff698b7c749c4c45
