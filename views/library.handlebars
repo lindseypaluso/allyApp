@@ -23,9 +23,6 @@
             <div class="col-3">
                 <button class="btn lib-btn text-secondary" data-filter="5"> Films</button>
             </div>
-            <div class="col-3">
-                <button class="btn lib-btn text-secondary" data-filter="6"> Short Films</button>
-            </div>
         </div>
     </div>
     <br>
@@ -57,8 +54,8 @@
                 {{#each podcasts}}
                     <div class="item text-center">
                         <h3>{{title}}</h3>
+                        <p>{{description}}</p>
                         <p id="purchase-link"><a href="{{link1}}">Listen</a></p>
-                        <p id="amazon-link"><a href="{{link2}}">Amazon</a></p>
                     </div>
                 {{/each}}
             </div>
@@ -72,16 +69,7 @@
                 {{/each}}
             </div>
             <div class="col-lg-4 col-md-6 filterDiv films" data-category="5" data-sort="value">
-                {{#each toWatch_long}}
-                    <div class="item text-center">
-                        <h3>{{title}}</h3>
-                        <p>Found on {{streaming_service}}</p>
-                        <p id="purchase-link"><a href="{{link}}">Watch</a></p>
-                    </div>
-                {{/each}}
-            </div>
-            <div class="col-lg-4 col-md-6 filterDiv shortFilms" data-category="6" data-sort="value">
-                {{#each toWatch_short}}
+                {{#each toWatches}}
                     <div class="item text-center">
                         <h3>{{title}}</h3>
                         <p>Found on {{streaming_service}}</p>
