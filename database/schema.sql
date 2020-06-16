@@ -15,7 +15,7 @@ CREATE TABLE childrensBooks(
   link2 VARCHAR(2000)
 );
   
-  CREATE TABLE podcasts(
+CREATE TABLE podcasts(
   title VARCHAR(350) NOT NULL,
   link1 VARCHAR(2000),
   link2 VARCHAR(2000)
