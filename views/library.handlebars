@@ -30,50 +30,50 @@
     <div class="container library-content">
         <div id="filter-container" class="row">
             <div class="col-lg-4 col-md-6 filterDiv books" data-category="1" data-sort="value">
-                {{#each books}}
+                {{#each data.Books }}
                     <div class="item text-center">
-                        <h3>{{title}}</h3>
-                        <p>By {{author}}</p>
-                        <p>Genre: {{genre}}</p>
-                        <p id="purchase-link"><a href="{{link1}}">Purchase</a></p>
-                        <p id="amazon-link"><a href="{{link2}}">Amazon</a></p>
+                        <h3>{{data.Books.title}}</h3>
+                        <p>By {{data.Books.author}}</p>
+                        <p>Genre: {{data.Books.genre}}</p>
+                        <p id="purchase-link"><a href="{{data.Books.link1}}">Purchase</a></p>
+                        <p id="amazon-link"><a href="{{data.Books.link2}}">Amazon</a></p>
                     </div>
                 {{/each}}
             </div>
             <div class="col-lg-4 col-md-6 filterDiv childrensBooks" data-category="2" data-sort="value">
-                {{#each childrensBooks}}
+                {{#each data.ChildrensBooks}}
                     <div class="item text-center">
-                        <h3>{{title}}</h3>
-                        <p>By {{author}}</p>
-                        <p id="purchase-link"><a href="{{link1}}">Purchase</a></p>
-                        <p id="amazon-link"><a href="{{link2}}">Amazon</a></p>
+                        <h3>{{data.ChildrensBooks.title}}</h3>
+                        <p>By {{data.ChildrensBooks.author}}</p>
+                        <p id="purchase-link"><a href="{{data.ChildrensBooks.link1}}">Purchase</a></p>
+                        <p id="amazon-link"><a href="{{data.ChildrensBooks.link2}}">Amazon</a></p>
                     </div>
                 {{/each}}
             </div>
             <div class="col-lg-4 col-md-6 filterDiv podcasts" data-category="3" data-sort="value">
-                {{#each podcasts}}
+                {{#each data.Podcasts}}
                     <div class="item text-center">
-                        <h3>{{title}}</h3>
-                        <p>{{description}}</p>
-                        <p id="purchase-link"><a href="{{link1}}">Listen</a></p>
+                        <h3>{{data.Podcasts.title}}</h3>
+                        <p>{{data.Podcasts.description}}</p>
+                        <p id="purchase-link"><a href="{{data.Podcasts.link}}">Listen</a></p>
                     </div>
                 {{/each}}
             </div>
             <div class="col-lg-4 col-md-6 filterDiv articles" data-category="4" data-sort="value">
-                {{#each articles}}
+                {{#each data.Articles}}
                     <div class="item text-center">
-                        <h3>{{title}}</h3>
-                        <p>By {{author}}</p>
-                        <p id="purchase-link"><a href="{{link}}">Read</a></p>
+                        <h3>{{data.Articles.title}}</h3>
+                        <p>By {{data.Articles.author}}</p>
+                        <p id="purchase-link"><a href="{{data.Articles.link}}">Read</a></p>
                     </div>
                 {{/each}}
             </div>
             <div class="col-lg-4 col-md-6 filterDiv films" data-category="5" data-sort="value">
-                {{#each toWatches}}
+                {{#each data.ToWatch}}
                     <div class="item text-center">
-                        <h3>{{title}}</h3>
-                        <p>Found on {{streaming_service}}</p>
-                        <p id="purchase-link"><a href="{{link}}">Watch</a></p>
+                        <h3>{{data.ToWatch.title}}</h3>
+                        <p>Found on {{data.ToWatch.streaming_service}}</p>
+                        <p id="purchase-link"><a href="{{data.ToWatch.link}}">Watch</a></p>
                     </div>
                 {{/each}}
             </div>
