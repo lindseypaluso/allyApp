@@ -1,0 +1,55 @@
+<div class="container">
+    <div class="card bg-primary text-white text-center p-3">
+        <h1 class="display-4">ALLY</h1>
+        <blockquote class="blockquote mb-0">
+            <h4 class="font-italic">noun:</h4>
+            <p>One that is associated with another as a helper; a person or group that
+                provides assistance and support in an ongoing effort, activity, or struggle.
+            </p>
+            <h4 class="font-italic">verb:</h4>
+            <p>To unite or form a connection or relation between; associate.
+            </p>
+            <footer class="blockquote-footer text-white">
+                <small>
+                    <cite title="Source Title">Merriam-Webster</cite>
+                </small>
+            </footer>
+        </blockquote>
+    </div>
+    <h3>Seeking an ally? Post your request below.</h3>
+</div>
+<div class="container hidden">
+    <div class="row top-30">
+        <div class="col-md-2 col-sm-2">
+            <a class="btn btn-light" href="/needhelp">See Help Blogs</a>
+        </div>
+        <!-- <div class="col-md-2 col-sm-2">
+        <a class="btn btn-light" href="/authors">Manage Authors</a>
+      </div> -->
+    </div>
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <form id="cms">
+                <div class="form-group">
+                    <label for="title">Subject:</label>
+                    <input placeholder="Post Title" type="text" class="form-control" id="title">
+                    <br />
+                    <label for="body">Description:</label>
+                    <textarea placeholder="Describe the situation and the type of help you need from an ally."
+                        class="form-control" rows="10" id="body"></textarea>
+                    <br>
+                    <label for="title">Preferred Contact Method:</label>
+                    <input placeholder="This information will be public." type="text" class="form-control" id="title">
+                    <div class="form-group">
+                        <label for="category">Select Author:</label>
+                        <select class="custom-select" id="author">
+                        </select>
+                    </div>
+                    <br />
+                    <button type="submit" class="btn btn-success submit">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<script src="js/helpForm.js" type="text/javascript"></script>
