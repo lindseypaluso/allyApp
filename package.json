@@ -1,5 +1,5 @@
 {
-  "name": "The Ally App",
+  "name": "TheAllyApp",
   "version": "1.0.0",
   "description": "The Ally App",
   "main": "server.js",
@@ -11,11 +11,17 @@
   },
   "license": "ISC",
   "dependencies": {
-    "dotenv": "^8.0.0",
-    "express": "^4.17.0",
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
     "express-handlebars": "^3.1.0",
+    "express-session": "^1.17.1",
+    "mysql": "^2.18.1",
     "mysql2": "^1.6.5",
-    "sequelize": "^5.8.6"
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0",
+    "sequelize": "^5.21.13"
   },
   "devDependencies": {
     "chai": "^4.2.0",
