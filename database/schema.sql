@@ -5,14 +5,17 @@ CREATE TABLE books(
   author VARCHAR(250),
   genre VARCHAR(250),
   link1 VARCHAR(2000),
-  link2 VARCHAR(2000)
+  link2 VARCHAR(2000),
+  link3 VARCHAR(2000)
 );
   
 CREATE TABLE childrensBooks(
   title VARCHAR(350) NOT NULL,
   author VARCHAR(250),
+  age_range VARCHAR(250),
   link1 VARCHAR(2000),
-  link2 VARCHAR(2000)
+  link2 VARCHAR(2000),
+  link3 VARCHAR(2000)
 );
   
 CREATE TABLE podcasts(
@@ -24,11 +27,13 @@ CREATE TABLE podcasts(
 CREATE TABLE articles(
   title VARCHAR(350) NOT NULL,
   author VARCHAR(250),
-  link VARCHAR(2000)
+  link VARCHAR(2000),
+  link2 VARCHAR(2000)
 );
   
 CREATE TABLE toWatch(
   title VARCHAR(350) NOT NULL,
-  streaming_service VARCHAR(150),
-  link VARCHAR(2000)
+  source VARCHAR(150),
+  link VARCHAR(2000),
+  link2 VARCHAR(2000)
 );
