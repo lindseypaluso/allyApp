@@ -29,6 +29,7 @@ module.exports = function(app) {
             all['towatch'] = data;
         });
 
-        res.render("library", { data: all });
+        console.log(all);
+        res.render("library", all);
     });
 };
