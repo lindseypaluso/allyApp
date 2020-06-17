@@ -75,16 +75,7 @@
                 {{/each}}
             </div>
             <div class="col-lg-4 col-md-6 filterDiv films" data-category="5" data-sort="value">
-                {{#each toWatch_long}}
-                    <div class="item text-center">
-                        <h3>{{title}}</h3>
-                        <p>Found on {{streaming_service}}</p>
-                        <p id="purchase-link"><a href="{{link}}">Watch</a></p>
-                    </div>
-                {{/each}}
-            </div>
-            <div class="col-lg-4 col-md-6 filterDiv shortFilms" data-category="6" data-sort="value">
-                {{#each toWatch_short}}
+                {{#each toWatch}}
                     <div class="item text-center">
                         <h3>{{title}}</h3>
                         <p>Found on {{streaming_service}}</p>
