@@ -1,10 +1,11 @@
 var db = require("../models");
 
-module.exports = function (app) {
-  // GET route to get all the help requests
-  app.get("/needhelp", function (req, res) {
-    db.Help.findAll({}).then(function (data) {
-      res.json(data);
+module.exports = function(app) {
+    // GET route to get all the help requests
+    app.get("/api/needhelp", function(req, res) {
+        db.Help.findAll({}).then(function(data) {
+            res.json(data);
+        });
     });
   });
 
