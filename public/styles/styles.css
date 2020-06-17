@@ -161,3 +161,9 @@ a:hover {
     border: 1px solid #ccc;
   }
 }
+
+/*====================================== NEED HELP page styling====================================== */
+.card-header button.connect {
+  float: right;
+  margin: 5px;
+}
