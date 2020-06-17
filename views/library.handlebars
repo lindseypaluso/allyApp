@@ -33,9 +33,12 @@
     <div class="container library-content">
         <div id="filter-container" class="row">
             <div class="col-lg-4 col-md-6 filterDiv books" data-category="1" data-sort="value">
+                {{books}}
+
+                {{childrensBooks}}
                 {{#each books}}
                     <div class="item text-center">
-                        <h3>{{title}}</h3>
+                        <h3>{{books.title}}</h3>
                         <p>By {{author}}</p>
                         <p>Genre: {{genre}}</p>
                         <p id="purchase-link"><a href="{{link1}}">Purchase</a></p>
