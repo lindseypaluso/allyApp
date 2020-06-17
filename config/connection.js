@@ -2,7 +2,7 @@ var Sequelize = require("sequelize");
 
 var sequelize = new Sequelize("allyApp", "root", "root", {
     host: "localhost",
-    port: 8889,
+    port: 3306,
     dialect: "mysql",
     pool: {
         max: 15,
