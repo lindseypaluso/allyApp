@@ -1,0 +1,52 @@
+<div class="container">
+  <div class="card bg-primary text-white text-center p-3">
+    <h1 class="display-4">ALLY</h1>
+    <blockquote class="blockquote mb-0">
+      <h4 class="font-italic">noun:</h4>
+      <p>One that is associated with another as a helper; a person or group that
+        provides assistance and support in an ongoing effort, activity, or struggle.
+      </p>
+      <h4 class="font-italic">verb:</h4>
+      <p>To unite or form a connection or relation between; associate.
+      </p>
+      <footer class="blockquote-footer text-white">
+        <small>
+          <cite title="Source Title">Merriam-Webster</cite>
+        </small>
+      </footer>
+    </blockquote>
+  </div>
+</div>
+<div class="container blog">
+  <h1>Be an Ally</h1>
+  <h3>Take action now!</h3>
+  <div class="row">
+    <div class="col-md-2 col-sm-2">
+      <a class="btn btn-light" href="/form">Request Help</a>
+    </div>
+    <div class="col-md-2 col-sm-2">
+      <a class="btn btn-light" href="/addUser">Log-In</a>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12 blog-container">
+
+      <ul>
+        {{#each help}}
+        <li>
+          <p>Username: {{this.id}}</p>
+          <p>Title: {{this.title}}</p>
+          <p>Description: {{this.body}}</p>
+        </li>
+        {{/each}}
+      </ul>
+      <form action="/" method="POST">
+        <textarea type="text" name="wish"></textarea>
+
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.0/moment.min.js" type="text/javascript"></script>
+<script src="js/helpBlog.js" type="text/javascript"></script>
