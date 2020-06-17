@@ -35,6 +35,9 @@ app.set("view engine", "handlebars");
 // =============================================================
 require("./controllers/library_controller.js")(app);
 require("./controllers/users_controller.js")(app);
+require("./routes/htmlRoutes.js")(app);
+require("./routes/apiRoutes.js")(app);
+
 
 //load passport strategies
 require('./config/passport.js')(passport, db.Users);
