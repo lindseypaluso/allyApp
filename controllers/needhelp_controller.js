@@ -7,12 +7,10 @@ module.exports = function(app) {
             res.json(data);
         });
     });
-  });
 
   // POST route to save help requests
   app.post("/needhelp", function (req, res) {
-    db.//model name of db for need help page
-        .create({
+    db.Help.create({
       subject: req.body.subject,
       body: req.body.body
       //Any other columns?
@@ -23,8 +21,7 @@ module.exports = function(app) {
 
   // DELETE route to delete help requests
   app.delete("/needhelp/:id", function (req, res) {
-    db.//model name of db for need help page
-        .destroy({
+    db.Help.destroy({
       where: {
         id: req.params.id
       }
@@ -35,8 +32,7 @@ module.exports = function(app) {
 
   // PUT route to update help requests
   app.put("/needhelp", function (req, res) {
-    db.//model name of db for need help pag
-        .update({
+    db.Help.update({
       subject: req.body.subject,
       body: req.body.body
       //Any other columns?

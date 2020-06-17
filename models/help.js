@@ -14,15 +14,5 @@ module.exports = function (sequelize, DataTypes) {
         }
     });
 
-
-    Help.associate = function (models) {
-        // A Help model can't be created without a Username
-        Help.belongsTo(models.Username, {
-            foreignKey: {
-                allowNull: false
-            }
-        });
-    };
-
     return Help;
 };
