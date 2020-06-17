@@ -1,5 +1,5 @@
 {
-  "name": "allyapp",
+  "name": "TheAllyApp",
   "version": "1.0.0",
   "description": "Your project must: * Use a Node and Express Web Server; * Be backed by a MySQL Database an ORM (not necessarily Sequelize); * Have both GET and POST routes for retrieving and adding new data; * Be deployed using Heroku (with Data); * Utilize at least one new library, package, or technology that we haven’t discussed; * Have a polished frontend / UI; * Have folder structure that meets MVC Paradigm; * Meet good quality coding standards (indentation, scoping, naming). * Must not expose sensitive API key information on the server, see [Protecting-API-Keys-In-Node.md](../../../10-nodejs/03-Supplemental/Protecting-API-Keys-In-Node.md)",
   "main": "server.js",
@@ -21,8 +21,18 @@
   },
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/lindseypaluso/allyApp/issues"
+  "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^3.1.0",
+    "express-session": "^1.17.1",
+    "mysql": "^2.18.1",
+    "mysql2": "^1.6.5",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0",
+    "sequelize": "^5.21.13"
   },
   "homepage": "https://github.com/lindseypaluso/allyApp#readme"
 }
