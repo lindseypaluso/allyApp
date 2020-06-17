@@ -15,14 +15,10 @@ CREATE TABLE childrensBooks(
   link2 VARCHAR(2000)
 );
   
-  CREATE TABLE podcasts(
+CREATE TABLE podcasts(
   title VARCHAR(350) NOT NULL,
   link1 VARCHAR(2000),
-<<<<<<< HEAD
   link2 VARCHAR(2000)
-=======
-  link2 VARCHAR(2000)å
->>>>>>> 541cd1770efc1a1f7572ede7ff698b7c749c4c45
 );
   
 CREATE TABLE articles(
