@@ -18,7 +18,7 @@ app.set("view engine", "handlebars");
 
 // Routes
 // =============================================================
-// require("./controllers/library_controller.js")(app);
+require("./controllers/library_controller.js")(app);
 require("./routes/htmlRoutes.js")(app);
 require("./routes/apiRoutes.js")(app);
 
