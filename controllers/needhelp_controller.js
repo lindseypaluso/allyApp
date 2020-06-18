@@ -1,12 +1,13 @@
 var db = require("../models");
 
-module.exports = function(app) {
-    // GET route to get all the help requests
-    app.get("/api/needhelp", function(req, res) {
-        db.Help.findAll({}).then(function(data) {
-            res.json(data);
-        });
+module.exports = function (app) {
+  // This route has been tested and is functioning
+  app.get("/helpBlog", function (req, res) {
+    db.Help.findAll({}).then(function (data) {
+      console.log(data);
+      res.render("helpBlog", { data });
     });
+  });
 
   // POST route to save help requests
   app.post("/needhelp", function (req, res) {
