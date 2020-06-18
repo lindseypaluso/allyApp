@@ -1,3 +1,5 @@
+CREATE DATABASE allyApp;
+
 USE allyApp;
 
 CREATE TABLE books(
