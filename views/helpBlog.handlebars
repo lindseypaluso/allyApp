@@ -21,31 +21,123 @@
   <h1>Be an Ally</h1>
   <h3>Take action now!</h3>
   <div class="row">
-    <div class="col-md-2 col-sm-2">
-      <a class="btn btn-light" href="/form">Find an Ally</a>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-md-12 blog-container">
-      {{#each data}}
-      <div class="card">
-        <div class="card-header">
-          <button class="connect btn btn-info">Connect</button>
-          <h4>Title: {{dataValues.title}}</h4>
-          <p>Created: {{dataValues.createdAt}}</p>
-          <p id="blogName">Username: {{dataValues.name}}</p>
-        </div>
-        <div class="card-body">
-          <p>Description: {{dataValues.body}}</p>
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop">
+      Add to Ally Blog
+    </button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="staticBackdrop" data-backdrop="static" tabindex="-1" role="dialog"
+      aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form id="helpForm">
+              <div class="form-group">
+                <label for="title">Subject:</label>
+                <input placeholder="Blog Title" type="text" class="form-control" id="title">
+                <br />
+                <label for="body">Description:</label>
+                <textarea placeholder="Describe the situation and the type of help you need from an ally."
+                  class="form-control" rows="10" id="body"></textarea>
+                <div class="form-group">
+                  {{!-- Username will auto populate from log-in --}}
+                  <label for="category">Username:</label>
+                  {{!-- <select class="custom-select" id="selectUser> --}}
+                  {{!-- </select> --}}
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class=" modal-footer">
+            <button type="submit" class="btn btn-primary submit">Submit</button>
+          </div>
         </div>
       </div>
-      {{!-- <form action="/" method="POST">
+    </div>
+    {{!-- <div class="col-md-2 col-sm-2">
+      <button type="button" class="btn btn-primary btn-sm ibtn" data-toggle="modal" data-target="#staticBackdrop">
+        Add a Blog
+      </button>
+      {{!-- <a class="btn btn-light" href="/form">Find an Ally</a> --}}
+  </div> --}}
+</div>
+<div class="row">
+  <div class="col-md-12 blog-container">
+    {{#each data}}
+    <div class="card">
+      <div class="card-header">
+        <button class="connect btn btn-primary">Connect</button>
+        <h4>Title: {{dataValues.title}}</h4>
+        <p>Created: {{dataValues.createdAt}}</p>
+        <p id="blogName">Username: {{dataValues.name}}</p>
+      </div>
+      <div class="card-body">
+        <p>Description: {{dataValues.body}}</p>
+      </div>
+    </div>
+    {{!-- <form action="/" method="POST">
         <textarea type="text" name="wish"></textarea>
 
         <button type="submit">Submit</button>
       </form> --}}
-      {{/each}}
-    </div>
+    {{/each}}
   </div>
 </div>
+<!-- Modal to display Form for Blog -->
+{{!-- <div class="modal fade" id="blogModal" data-backdrop="false" tabindex="-1" role="dialog"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="name modal-title" id="staticBackdropLabel">Super Fluffy Omelet</h5>
+          <button type="button" class="btn-info" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body"> --}}
+{{!-- <ol id="instructions" class="list-group" type="1">
+                        </ol> --}}
+{{!-- </div> --}}
+{{!-- <div class="modal-footer">
+          <button type="button" class="btn btn-info" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> --}}
+<!-- SCRIPT FOR MODALS -->
+<script>
+  $(function () {
+    $('.btn[data-toggle=modal]').on('click', function () {
+      var $btn = $(this);
+      var currentDialog = $btn.closest('.modal-dialog'),
+        targetDialog = $($btn.attr('data-target'));;
+      if (!currentDialog.length)
+        return;
+      targetDialog.data('previous-dialog', currentDialog);
+      currentDialog.addClass('aside');
+      var stackedDialogCount = $('.modal.in .modal-dialog.aside').length;
+      if (stackedDialogCount <= 5) {
+        currentDialog.addClass('aside-' + stackedDialogCount);
+      }
+    });
+  });
+</script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.0/moment.min.js" type="text/javascript"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+  integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+  integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+  integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="assets/javascript/app.js"></script>
+<script type="text/javascript" src="assets/javascript/firebase.js"></script>
