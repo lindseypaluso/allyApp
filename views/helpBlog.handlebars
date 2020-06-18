@@ -22,28 +22,29 @@
   <h3>Take action now!</h3>
   <div class="row">
     <div class="col-md-2 col-sm-2">
-      <a class="btn btn-light" href="/form">Request Help</a>
-    </div>
-    <div class="col-md-2 col-sm-2">
-      <a class="btn btn-light" href="/addUser">Log-In</a>
+      <a class="btn btn-light" href="/form">Find an Ally</a>
     </div>
   </div>
   <div class="row">
     <div class="col-md-12 blog-container">
-      <ul>
-        {{#each data}}
-        <li>
-          <p>Username: {{dataValues.id}}</p>
-          <p>Title: {{dataValues.title}}</p>
+      {{#each data}}
+      <div class="card">
+        <div class="card-header">
+          <button class="connect btn btn-info">Connect</button>
+          <h4>Title: {{dataValues.title}}</h4>
+          <p>Created: {{dataValues.createdAt}}</p>
+          <p id="blogName">Username: {{dataValues.name}}</p>
+        </div>
+        <div class="card-body">
           <p>Description: {{dataValues.body}}</p>
-        </li>
-        {{/each}}
-      </ul>
-      <form action="/" method="POST">
+        </div>
+      </div>
+      {{!-- <form action="/" method="POST">
         <textarea type="text" name="wish"></textarea>
 
         <button type="submit">Submit</button>
-      </form>
+      </form> --}}
+      {{/each}}
     </div>
   </div>
 </div>
