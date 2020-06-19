@@ -1,5 +1,5 @@
 <div class="library main container">
-    <h1>Library</h1>
+    <h1 class="text-center mb-5 mt-5"><strong>Library</strong></h1>
     <!--Planning on using https://www.w3schools.com/bootstrap/bootstrap_filters.asp to apply jQuery filter-->
     <div id="filter-menu">
         <div class="row ">
@@ -32,7 +32,7 @@
             <div class="filterDiv books col-12" data-category="1" data-sort="value">
                 <div class="row">
                     {{#each books}}
-                    <div class="col-md-4">
+                    <div class="col-lg-4 col-md-6">
                         <div class="item text-center mr-3 mb-3">
                             <img src="{{dataValues.link3}}">
                             <h3>{{dataValues.title}}</h3>
@@ -49,7 +49,7 @@
             <div class="filterDiv childrensBooks col-12" data-category="2" data-sort="value">
                 <div class="row">
                     {{#each childrensBooks}}
-                    <div class="col-md-4">
+                    <div class="col-lg-4 col-md-6">
                         <div class="item text-center mr-3 mb-3">
                             <img src="{{dataValues.link3}}">
                             <h3>{{dataValues.title}}</h3>
@@ -66,7 +66,7 @@
             <div class="filterDiv podcasts col-12" data-category="3" data-sort="value">
                 <div class="row">
                     {{#each podcasts}}
-                    <div class="col-md-4">
+                    <div class="col-lg-4 col-md-6">
                         <div class="item text-center mr-3 mb-3">
                             <img src="{{dataValues.link2}}">
                             <h3>{{dataValues.title}}</h3>
@@ -80,7 +80,7 @@
             <div class="filterDiv articles col-12" data-category="4" data-sort="value">
                 <div class="row">
                     {{#each articles}}
-                    <div class="col-md-4">
+                    <div class="col-lg-4 col-md-6">
                         <div class="item text-center mr-3 mb-3">
                             <img src="{{dataValues.link2}}">
                             <h3>{{dataValues.title}}</h3>
@@ -95,7 +95,7 @@
             <div class="filterDiv films col-12" data-category="5" data-sort="value">
                 <div class="row">
                     {{#each toWatch}}
-                    <div class="col-md-4">
+                    <div class="col-lg-4 col-md-6">
                         <div class="item text-center mr-3 mb-3">
                             <img src="{{dataValues.link2}}">
                             <h3>{{dataValues.title}}</h3>

@@ -2,32 +2,34 @@
 <html>
 
 <head>
-  <meta charset="utf-8">
-  <!--Link to bootstrap-->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">    
-  <!--Link to personal styling-->
-  <link rel="stylesheet" href="/styles/styles.css" media="screen" title="no title" charset="utf-8">
-  <!--Link to google fonts-->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  <!--tab display-->
-  <title>Ally App</title>
-  <!--js files-->
-  
+    <meta charset="utf-8">
+    <!--Link to bootstrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--Link to personal styling-->
+    <link rel="stylesheet" href="/styles/styles.css" media="screen" title="no title" charset="utf-8">
+    <!--Link to google fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <!--tab display-->
+    <title>Ally App</title>
+    <!--js files-->
+
 </head>
 
 <body>
-  <header>
+    <header>
         <!--Ally App logo will display on far left of every page-->
         <!--NavBar will display on every page (left justify)-->
         <nav class="homepage-nav navbar navbar-expand-md static-top p-0 fixed-top" id="navlinks">
             <div class="container-fluid">
                 <!--Ally App Logo?-->
-                <div id="logo" class="text-dark">
+                <div id="logo" class="text-dark mr-3">
                     <h4>The</h4>
-                    <h4>Ally</h4>
+                    <h4><strong>Ally</strong></h4>
                     <h4 class="text-secondary">App</h4>
                 </div>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbarNav">
@@ -35,7 +37,8 @@
                 </button>
                 <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2 navbarNav">
                     <ul class="navbar-nav mr-auto">
-                        <li class="nav-item active"><a href="/" class="text-secondary nav-link active">Home<span class="sr-only">(current)</span></a></li>
+                        <li class="nav-item active"><a href="/" class="text-secondary nav-link active">Home<span
+                                    class="sr-only">(current)</span></a></li>
                         <li class="nav-item"><a href="/library" class="text-secondary nav-link">Library</a></li>
                         <li class="nav-item"><a href="#" class="text-secondary nav-link">Petitions</a></li>
                         <li class="nav-item"><a href="/helpBlog" class="text-secondary nav-link">Need Help?</a></li>
@@ -44,20 +47,12 @@
                 <div class="navbar-collapse collapse w-100 order-3 dual-collapse2 navbarNav">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item">
-                            <!--Search bar will display on every page (right justify)-->
-                            <div id="search-container" action="#">
-                                <button type="submit" id="search-button"><i class="fa fa-search"></i></button>
-                                <input type="text" placeholder="Search" name="search" id="search-input">
-                            </div>
-                        </li>
-                        <li class="nav-item">
                             <!--Link to Login Page-->
                             <a class="nav-link login-link" href="/users/login">
                                 <!--Avatar img displays in far right corner-->
                                 <div class="user-avatar-div">
                                     <span class="icon-box"><i class="fa fa-user-o fa-xxs text-white"></i></span>
                                     <span id="loggedin">Login/Register</span>
-                                    <img class="user-avatar" src="" />
                                 </div>
                             </a> 
                         </li>
@@ -72,7 +67,7 @@
     <br>
     {{{body}}}
 
-  <script src="/js/index.js"></script>
+    <script src="/js/index.js"></script>
 </body>
 
 </html>
