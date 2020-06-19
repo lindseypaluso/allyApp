@@ -17,6 +17,7 @@ var PORT = process.env.PORT || 8080;
 //For BodyParser
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+app.use(require('express-session')({ secret: 'keyboard cat', resave: true, saveUninitialized: true }));
 
 // Static directory
 app.use(express.static("public"));

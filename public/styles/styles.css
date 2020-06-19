@@ -172,3 +172,26 @@ a:hover {
   float: right;
   margin: 5px;
 }
+
+.ally-box {
+  background-color: rgb(253, 232, 208);
+  border: none;
+  padding: 30px 180px 50px 180px;
+}
+
+.ally {
+  margin-bottom: 30px;
+}
+
+.needhelp-box {
+  margin: 30px;
+}
+
+.help-btn {
+  margin: 0 auto;
+  font-size: 13pt;
+  background-color: #ddd;
+  min-height: 80px;
+  margin-bottom: 50px;
+  width: 300px;
+}
