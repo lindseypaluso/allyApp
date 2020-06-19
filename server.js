@@ -23,7 +23,13 @@ app.use(express.static("public"));
 
 // For Passport
  
-app.use(session({ secret: process.env.SALT,resave: true, saveUninitialized:true})); // session secret
+app.use(session({ 
+  secret: process.env.SALT,
+  resave: false, 
+  saveUninitialized:true, 
+  cookie: { maxAge: 24 * 60 * 60 * 1000 }
+})); // session secret
+
 app.use(passport.initialize());
 app.use(passport.session()); // persistent login sessions
 
