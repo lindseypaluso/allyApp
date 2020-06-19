@@ -18,10 +18,17 @@ module.exports = function(app) {
     app.get('/users/register', authController.register);
     app.get('/users/login', authController.login);
 
-    app.get('/users/logout',authController.logout);
+    app.get('/users/logout', function (req, res){
+        req.logout();
+        res.clearCookie('connect.sid', {path: '/'});
+        req.session.destroy(function() {
+            res.clearCookie('connect.sid');
+            res.redirect('/');
+        });
+    });
 
     app.post('/users/login', passport.authenticate('local-login', {
-        successRedirect: '/users/authenticate',
+        successRedirect: '/',
         failureRedirect: '/users/login'
     }));
 
@@ -38,6 +45,7 @@ module.exports = function(app) {
                 res.send(user.dataValues);
             });
         }
+
     });
  
     app.post('/users/register', passport.authenticate('local-register', {

@@ -22,10 +22,12 @@
   <h3>Take action now!</h3>
   <div class="row">
     <div class="col-md-6 col-sm-6">
-      <!-- Button trigger modal -->
-      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop">
-        Add to Ally Blog
-      </button>
+      <div class="help-login-protected">
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary" id="help-post" onclick="window.location='/users/login'">
+          Login/Register
+        </button>
+      </div>
     </div>
 
     <!-- Modal/Blog Form -->
@@ -40,24 +42,23 @@
             </button>
           </div>
           <div class="modal-body">
-            <form id="helpForm">
+            <form id="helpForm" method="POST" action="/helpBlog">
               <div class="form-group">
                 <label for="title">Subject:</label>
-                <input placeholder="Blog Title" type="text" class="form-control" id="title">
+                <input placeholder="Blog Title" type="text" class="form-control" id="title" name="title">
                 <br />
                 <label for="body">Description:</label>
                 <textarea placeholder="Describe the situation and the type of help you need from an ally."
-                  class="form-control" rows="10" id="body"></textarea>
-                <div class="form-group">
-                  {{!-- Username will auto populate from log-in info--}}
-                  <label for="category">Username:</label>
-                </div>
+                  class="form-control" rows="10" id="body" name="body"></textarea>
+                <input type="textfield" id="help_userid" name="help_userid" />
+                <input type="textfield" id="help_username" name="help_username" />
+              </div>
+              <div class=" modal-footer">
+                <button type="submit" class="btn btn-primary submit">Submit</button>
               </div>
             </form>
           </div>
-          <div class=" modal-footer">
-            <button type="submit" class="btn btn-primary submit">Submit</button>
-          </div>
+          
         </div>
       </div>
     </div>
@@ -70,7 +71,7 @@
           <button class="connect btn btn-primary">Connect</button>
           <h4>Title: {{dataValues.title}}</h4>
           <p>Created: {{dataValues.createdAt}}</p>
-          <p id="blogName">Username: {{dataValues.name}}</p>
+          <p id="blogName">Username: {{dataValues.username}}</p>
         </div>
         <div class="card-body">
           <p>Description: {{dataValues.body}}</p>
@@ -109,5 +110,4 @@
     crossorigin="anonymous"></script>
 
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script type="text/javascript" src="assets/javascript/app.js"></script>
-  <script type="text/javascript" src="assets/javascript/firebase.js"></script>
+  
