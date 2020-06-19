@@ -20,6 +20,7 @@ module.exports = function (sequelize, DataTypes) {
             len: [1]
         },
     });
-
     return Help;
 };
+
+// moment(createdAt).format('MMMM Do YYYY, h:mm:ss a');

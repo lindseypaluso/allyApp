@@ -142,7 +142,7 @@ If you'd like to create an account (which is necessary for posting and messaging
 
 ## Creators
 [Abby Nielson](https://github.com/aanielson) <br>
-[Chiafong](https://github.com/cftgithub) <br>
+[Chiafong Tsao](https://github.com/cftgithub) <br>
 [Lindsey Paluso](https://github.com/lindseypaluso) <br>
 [Megan Swenson](https://github.com/megswen) <br>
 [Riley Chatwin](https://github.com/Rileychatwin)

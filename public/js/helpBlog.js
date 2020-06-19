@@ -39,7 +39,7 @@ $(document).ready(function () {
         });
     }
 
-    // This function displays a message when there are no posts (not working)
+    // This function displays a message when there are no posts (code not working)
     function displayEmpty(id) {
         var query = window.location.search;
         var partial = "";
