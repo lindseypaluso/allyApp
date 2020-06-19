@@ -3,10 +3,10 @@
     {{#each messages}}
         <div class="row">
             <div class="col-md-4">
-                From: {{dataValues.fromId}}
+                From: {{User.dataValues.username}}
             </div>
             <div class="col-md-4">
-                Subject: {{dataValues.subject}}
+                RE: {{Help.dataValues.title}}
             </div>
             <div class="col-md-4">
                 Date: {{dataValues.createdAt}}
@@ -20,7 +20,7 @@
         </div>
         <div class="row">
             <div class="col-md-10">
-                    <button class="connect btn btn-primary" onclick="location.href='/messages/compose/{{dataValues.fromId}}'">Reply</button>
+                    <button class="connect btn btn-primary" onclick="location.href='/messages/compose/{{dataValues.fromId}}/{{dataValues.helpId}}/{{dataValues.id}}'">Reply</button>
             </div>
         </div>
         <hr />

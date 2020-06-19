@@ -24,5 +24,15 @@ module.exports = function (sequelize, DataTypes) {
             len: [1]
         },
     });
+
+    Help.associate = function(models) {
+        // Associating Author with Posts
+        // When an Author is deleted, also delete any associated Posts
+        Help.hasMany(models.Messages, {
+          onDelete: 'cascade',
+          foreignKey: "helpId"
+        });
+     };
+
     return Help;
 };
