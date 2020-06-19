@@ -72,10 +72,8 @@
       {{#each data}}
       <div class="card">
         <div class="card-header">
-          <button type="button" class="connect btn btn-primary" data-toggle="modal" data-target="#connect">
-            Connect
-          </button>
-          <h4>Subject: {{dataValues.title}}</h4>
+          <button class="connect btn btn-primary" onclick="location.href='/messages/compose/{{dataValues.uid}}'">Connect</button>
+          <h4>Title: {{dataValues.title}}</h4>
           <p>Created: {{dataValues.createdAt}}</p>
           <p id="blogName">Username: {{dataValues.username}}</p>
         </div>

@@ -196,3 +196,12 @@ a:hover {
   margin-bottom: 50px;
   width: 300px;
 }
+
+
+form .error {
+    color: red;
+}
+
+form input.error {
+  border: 1px solid red;
+}
