@@ -4,7 +4,8 @@ module.exports = function(sequelize, DataTypes) {
     author: DataTypes.STRING,
     genre: DataTypes.STRING,
     link1: DataTypes.STRING,
-    link2: DataTypes.STRING
+    link2: DataTypes.STRING,
+    link3: DataTypes.STRING
   });
   return Books;
 };
