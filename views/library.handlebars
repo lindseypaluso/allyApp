@@ -46,7 +46,7 @@
                     {{/each}}
                 </div>
             </div>
-            <div class="filterDiv childrensBooks" data-category="2" data-sort="value">
+            <div class="filterDiv childrensBooks col-12" data-category="2" data-sort="value">
                 <div class="row">
                     {{#each childrensBooks}}
                     <div class="col-md-4">
@@ -58,11 +58,12 @@
                             <span id="purchase-link"><a href="{{dataValues.link1}}">Purchase</a> || </span>
                             <span id="amazon-link"><a href="{{dataValues.link2}}">Amazon</a></span>
                         </div>
+                        <div class="clearfix"></div>
                     </div>
                     {{/each}}
                 </div>
             </div>
-            <div class="filterDiv podcasts" data-category="3" data-sort="value">
+            <div class="filterDiv podcasts col-12" data-category="3" data-sort="value">
                 <div class="row">
                     {{#each podcasts}}
                     <div class="col-md-4">
@@ -71,11 +72,12 @@
                             <h3>{{dataValues.title}}</h3>
                             <p id="purchase-link"><a href="{{dataValues.link1}}">Listen</a></p>
                         </div>
+                        <div class="clearfix"></div>
                     </div>
                     {{/each}}
                 </div>
             </div>
-            <div class="filterDiv articles" data-category="4" data-sort="value">
+            <div class="filterDiv articles col-12" data-category="4" data-sort="value">
                 <div class="row">
                     {{#each articles}}
                     <div class="col-md-4">
@@ -85,11 +87,12 @@
                             <p>By {{dataValues.author}}</p>
                             <p id="purchase-link"><a href="{{dataValues.link}}">Read</a></p>
                         </div>
+                        <div class="clearfix"></div>
                     </div>
                     {{/each}}
                 </div>
             </div>
-            <div class="filterDiv films" data-category="5" data-sort="value">
+            <div class="filterDiv films col-12" data-category="5" data-sort="value">
                 <div class="row">
                     {{#each toWatch}}
                     <div class="col-md-4">
@@ -99,6 +102,7 @@
                             <p>Found on {{dataValues.source}}</p>
                             <p id="purchase-link"><a href="{{dataValues.link}}">Watch</a></p>
                         </div>
+                        <div class="clearfix"></div>
                     </div>
                     {{/each}}
                 </div>
