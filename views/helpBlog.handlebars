@@ -23,61 +23,63 @@
     <h3>Submit a request for help below!</h3>
   </div>
   <div class="row">
-    <div class="col-md-12 col-sm-12 text-center" id="filter-menu">
-      <!-- Button trigger modal -->
-      <button type="button" class="btn btn-lg help-btn text-secondary" data-toggle="modal" data-target="#staticBackdrop">
-        Request Help
-      </button>
+    <div class="col-md-12 col-sm-6 text-center" id="filter-menu">
+      <div class="help-login-protected">
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary" id="help-post" onclick="window.location='/users/login'">
+          Login/Register
+        </button>
+      </div>
     </div>
   </div>
 </div>
 
-<!-- Modal/Blog Form -->
-<div class="modal fade" id="staticBackdrop" data-backdrop="static" tabindex="-1" role="dialog"
-  aria-labelledby="staticBackdropLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="staticBackdropLabel">Request Help</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <form id="helpForm">
-          <div class="form-group">
-            <label for="title">Subject:</label>
-            <input placeholder="Blog Title" type="text" class="form-control" id="title">
-            <br />
-            <label for="body">Description:</label>
-            <textarea placeholder="Describe the situation and the type of help you need from an ally."
-              class="form-control" rows="10" id="body"></textarea>
-            <div class="form-group">
-              {{!-- Username will auto populate from log-in info--}}
-              <label for="category">Username:</label>
-            </div>
+    <!-- Modal/Blog Form -->
+    <div class="modal fade" id="staticBackdrop" data-backdrop="static" tabindex="-1" role="dialog"
+      aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
           </div>
-        </form>
-      </div>
-      <div class=" modal-footer">
-        <button type="submit" class="btn btn-primary submit">Submit</button>
+          <div class="modal-body">
+            <form id="helpForm" method="POST" action="/helpBlog">
+              <div class="form-group">
+                <label for="title">Subject:</label>
+                <input placeholder="Blog Title" type="text" class="form-control" id="title" name="title">
+                <br />
+                <label for="body">Description:</label>
+                <textarea placeholder="Describe the situation and the type of help you need from an ally."
+                  class="form-control" rows="10" id="body" name="body"></textarea>
+                <input type="textfield" id="help_userid" name="help_userid" />
+                <input type="textfield" id="help_username" name="help_username" />
+              </div>
+              <div class=" modal-footer">
+                <button type="submit" class="btn btn-primary submit">Submit</button>
+              </div>
+            </form>
+          </div>
+          
+        </div>
       </div>
     </div>
   </div>
-</div>
-</div>
-<div class="row">
-  <div class="col-md-12 blog-container">
-    {{#each data}}
-    <div class="card">
-      <div class="card-header">
-        <button class="connect btn btn-primary">Connect</button>
-        <h4>Title: {{dataValues.title}}</h4>
-        <p>Created: {{dataValues.createdAt}}</p>
-        <p id="blogName">Username: {{dataValues.name}}</p>
-      </div>
-      <div class="card-body">
-        <p>Description: {{dataValues.body}}</p>
+  <div class="row">
+    <div class="col-md-12 blog-container">
+      {{#each data}}
+      <div class="card">
+        <div class="card-header">
+          <button class="connect btn btn-primary">Connect</button>
+          <h4>Title: {{dataValues.title}}</h4>
+          <p>Created: {{dataValues.createdAt}}</p>
+          <p id="blogName">Username: {{dataValues.username}}</p>
+        </div>
+        <div class="card-body">
+          <p>Description: {{dataValues.body}}</p>
+        </div>
       </div>
     </div>
     {{/each}}
@@ -109,6 +111,4 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
   integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script type="text/javascript" src="assets/javascript/app.js"></script>
-<script type="text/javascript" src="assets/javascript/firebase.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
