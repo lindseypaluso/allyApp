@@ -23,6 +23,7 @@
     <h3>Submit a request for help below!</h3>
   </div>
   <div class="row">
+
     <div class="col-md-12 col-sm-6 text-center" id="filter-menu">
       <div class="help-login-protected">
         <!-- Button trigger modal -->
@@ -34,13 +35,13 @@
   </div>
 </div>
 
-    <!-- Modal/Blog Form -->
-    <div class="modal fade" id="staticBackdrop" data-backdrop="static" tabindex="-1" role="dialog"
+    <!-- Form Modal -->
+    <div class="modal fade" id="form" data-backdrop="static" tabindex="-1" role="dialog"
       aria-labelledby="staticBackdropLabel" aria-hidden="true">
       <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+            <h5 class="modal-title" id="staticBackdropLabel">Request Help</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
@@ -62,7 +63,6 @@
               </div>
             </form>
           </div>
-          
         </div>
       </div>
     </div>
@@ -72,8 +72,10 @@
       {{#each data}}
       <div class="card">
         <div class="card-header">
-          <button class="connect btn btn-primary">Connect</button>
-          <h4>Title: {{dataValues.title}}</h4>
+          <button type="button" class="connect btn btn-primary" data-toggle="modal" data-target="#connect">
+            Connect
+          </button>
+          <h4>Subject: {{dataValues.title}}</h4>
           <p>Created: {{dataValues.createdAt}}</p>
           <p id="blogName">Username: {{dataValues.username}}</p>
         </div>
