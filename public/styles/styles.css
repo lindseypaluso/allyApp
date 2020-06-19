@@ -31,7 +31,7 @@ h4 {line-height: 0.8;}
 }
 a:hover {
   border-bottom: solid;
-  border-bottom-color: gray;
+  border-bottom-color: yellow;
 }
 /* Style the "active" element to highlight the current page */
 .navbar a.active {
@@ -78,7 +78,7 @@ a:hover {
 }
 .user-avatar-div {
   box-sizing: content-box;
-  background-color: gray;
+  background-color: rgb(252, 252, 150);
   position: relative;
   padding-left: 4px;
   width: 30px;
@@ -113,6 +113,9 @@ a:hover {
   font-weight: bolder;
 }
 /*====================================== LIBRARY page styling====================================== */
+.library h1 {
+  font-size: 40pt;
+}
 .lib-btn {
   font-size: 13pt;
   background-color: #ddd;
@@ -121,7 +124,7 @@ a:hover {
 }
 #filter-menu button:hover {
   border-bottom: solid;
-  border-bottom-color: gray;
+  border-bottom-color: yellow;
 }
 .filterDiv {
   display: none;
