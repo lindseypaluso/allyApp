@@ -102,13 +102,13 @@ a:hover {
 }
 #myCarousel h3 {
   font-size: 28pt;
-    text-shadow: 2px 2px grey;
+  text-shadow: 2px 2px grey;
 }
 .mission-statement h2 {
-    font-size: 40pt;
+  font-size: 40pt;
 }
 .carousel-caption {
-    color: rgb(253, 232, 208);
+  color: rgb(253, 232, 208);
 }
 /*====================================== LIBRARY page styling====================================== */
 .library h1 {
