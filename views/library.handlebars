@@ -4,24 +4,24 @@
     <div id="filter-menu">
         <div class="row ">
             <div class="col-4">
-                <button class="btn lib-btn text-secondary active" data-filter="0"> Show all</button>
+                <button class="btn mb-3 lib-btn text-secondary active" data-filter="0"> Show all</button>
             </div>
             <div class="col-4">
-                <button class="btn lib-btn text-secondary" data-filter="1"> Books</button>                
+                <button class="btn mb-3 lib-btn text-secondary" data-filter="1"> Books</button>
             </div>
             <div class="col-4">
-                <button class="btn lib-btn text-secondary" data-filter="2"> Childrens Books</button>
+                <button class="btn mb-3 lib-btn text-secondary" data-filter="2"> Childrens Books</button>
             </div>
         </div>
         <div class="row">
             <div class="col-4">
-                <button class="btn lib-btn text-secondary" data-filter="3"> Podcasts</button>
+                <button class="btn mb-3 lib-btn text-secondary" data-filter="3"> Podcasts</button>
             </div>
             <div class="col-4">
-                <button class="btn lib-btn text-secondary" data-filter="4"> Articles</button>
+                <button class="btn mb-3 lib-btn text-secondary" data-filter="4"> Articles</button>
             </div>
             <div class="col-4">
-                <button class="btn lib-btn text-secondary" data-filter="5"> Films</button>
+                <button class="btn mb-3 lib-btn text-secondary" data-filter="5"> Films</button>
             </div>
         </div>
     </div>
@@ -29,60 +29,79 @@
     <br>
     <div class="container library-content">
         <div id="filter-container" class="row">
-            <div class="col-lg-6 filterDiv books" data-category="1" data-sort="value">
-                {{books}}
-                {{childrensBooks}}
-                {{#each books}}
-                    <div class="item text-center mr-3 mb-3">
-                        <img src="{{dataValues.link3}}" >
-                        <h3>{{dataValues.title}}</h3>
-                        <p>By {{author}}</p>
-                        <p>Genre: {{genre}}</p>
-                        <span id="purchase-link"><a href="{{link1}}">Purchase</a>  ||  </span>
-                        <span id="amazon-link"><a href="{{link2}}">Amazon</a></span>
+            <div class="filterDiv books col-12" data-category="1" data-sort="value">
+                <div class="row">
+                    {{#each books}}
+                    <div class="col-md-4">
+                        <div class="item text-center mr-3 mb-3">
+                            <img src="{{dataValues.link3}}">
+                            <h3>{{dataValues.title}}</h3>
+                            <p>By {{dataValues.author}}</p>
+                            <p>Genre: {{dataValues.genre}}</p>
+                            <span id="purchase-link"><a href="{{dataValues.link1}}">Purchase</a> || </span>
+                            <span id="amazon-link"><a href="{{dataValues.link2}}">Amazon</a></span>
+                        </div>
+                        <div class="clearfix"></div>
                     </div>
-                {{/each}}
+                    {{/each}}
+                </div>
             </div>
-            <div class="col-lg-6 filterDiv childrensBooks" data-category="2" data-sort="value">
-                {{#each childrensBooks}}
-                    <div class="item text-center mr-3 mb-3">
-                        <img src="{{link3}}" >
-                        <h3>{{title}}</h3>
-                        <p>By {{author}}</p>
-                        <p>Age Range: {{age_range}}</p>
-                        <span id="purchase-link"><a href="{{link1}}">Purchase</a>  ||  </span>
-                        <span id="amazon-link"><a href="{{link2}}">Amazon</a></span>
+            <div class="filterDiv childrensBooks" data-category="2" data-sort="value">
+                <div class="row">
+                    {{#each childrensBooks}}
+                    <div class="col-md-4">
+                        <div class="item text-center mr-3 mb-3">
+                            <img src="{{dataValues.link3}}">
+                            <h3>{{dataValues.title}}</h3>
+                            <p>By {{dataValues.author}}</p>
+                            <p>Age Range: {{dataValues.age_range}}</p>
+                            <span id="purchase-link"><a href="{{dataValues.link1}}">Purchase</a> || </span>
+                            <span id="amazon-link"><a href="{{dataValues.link2}}">Amazon</a></span>
+                        </div>
                     </div>
-                {{/each}}
+                    {{/each}}
+                </div>
             </div>
-            <div class="col-lg-6 filterDiv podcasts" data-category="3" data-sort="value">
-                {{#each podcasts}}
-                    <div class="item text-center mr-3 mb-3">
-                        <img src="{{link2}}" >
-                        <h3>{{title}}</h3>
-                        <p id="purchase-link"><a href="{{link1}}">Listen</a></p>
+            <div class="filterDiv podcasts" data-category="3" data-sort="value">
+                <div class="row">
+                    {{#each podcasts}}
+                    <div class="col-md-4">
+                        <div class="item text-center mr-3 mb-3">
+                            <img src="{{dataValues.link2}}">
+                            <h3>{{dataValues.title}}</h3>
+                            <p id="purchase-link"><a href="{{dataValues.link1}}">Listen</a></p>
+                        </div>
                     </div>
-                {{/each}}
+                    {{/each}}
+                </div>
             </div>
-            <div class="col-lg-6 filterDiv articles" data-category="4" data-sort="value">
-                {{#each articles}}
-                    <div class="item text-center mr-3 mb-3">
-                        <img src="{{link2}}" >
-                        <h3>{{title}}</h3>
-                        <p>By {{author}}</p>
-                        <p id="purchase-link"><a href="{{link}}">Read</a></p>
+            <div class="filterDiv articles" data-category="4" data-sort="value">
+                <div class="row">
+                    {{#each articles}}
+                    <div class="col-md-4">
+                        <div class="item text-center mr-3 mb-3">
+                            <img src="{{dataValues.link2}}">
+                            <h3>{{dataValues.title}}</h3>
+                            <p>By {{dataValues.author}}</p>
+                            <p id="purchase-link"><a href="{{dataValues.link}}">Read</a></p>
+                        </div>
                     </div>
-                {{/each}}
+                    {{/each}}
+                </div>
             </div>
-            <div class="col-lg-6 filterDiv films" data-category="5" data-sort="value">
-                {{#each toWatch}}
-                    <div class="item text-center mr-3 mb-3">
-                        <img src="{{link2}}" >
-                        <h3>{{title}}</h3>
-                        <p>Found on {{source}}</p>
-                        <p id="purchase-link"><a href="{{link}}">Watch</a></p>
+            <div class="filterDiv films" data-category="5" data-sort="value">
+                <div class="row">
+                    {{#each toWatch}}
+                    <div class="col-md-4">
+                        <div class="item text-center mr-3 mb-3">
+                            <img src="{{dataValues.link2}}">
+                            <h3>{{dataValues.title}}</h3>
+                            <p>Found on {{dataValues.source}}</p>
+                            <p id="purchase-link"><a href="{{dataValues.link}}">Watch</a></p>
+                        </div>
                     </div>
-                {{/each}}
+                    {{/each}}
+                </div>
             </div>
         </div>
     </div>
@@ -90,8 +109,8 @@
 
 <!--js files-->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
     integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
     crossorigin="anonymous"></script>
