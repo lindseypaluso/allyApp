@@ -174,8 +174,13 @@ a:hover {
 }
 
 .ally-box {
-  background-color: rgb(235, 235, 235);
+  background-color: rgb(253, 232, 208);
   border: none;
+  padding: 30px 180px 50px 180px;
+}
+
+.ally {
+  margin-bottom: 30px;
 }
 
 .needhelp-box {
@@ -184,9 +189,9 @@ a:hover {
 
 .help-btn {
   margin: 0 auto;
-  background-color: rgb(240, 237, 60);
-  color: gray;
-  font-size: 30px;
+  font-size: 13pt;
+  background-color: #ddd;
+  min-height: 80px;
   margin-bottom: 50px;
-  border: none;
+  width: 300px;
 }
