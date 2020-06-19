@@ -9,7 +9,7 @@ This full-stack, MVC (Model-View-Controller) application allows you to create he
 Promote the well-being of communities by connecting organizations and individuals in combating racial inequalities and prejudice by providing resources to protect themselves and their loved ones.
 
 ## Deployed App
-You can view our deployed project by clicking [here](PASTE LIVE LINK HERE).
+You can view our deployed project by clicking <a href="https://ally-resources.herokuapp.com/">HERE</a>
 
 To set up this application locally on your computer, perform the following steps:
 
@@ -142,7 +142,7 @@ If you'd like to create an account (which is necessary for posting and messaging
 
 ## Creators
 [Abby Nielson](https://github.com/aanielson) <br>
-[Chiafong](https://github.com/cftgithub) <br>
+[Chiafong Tsao](https://github.com/cftgithub) <br>
 [Lindsey Paluso](https://github.com/lindseypaluso) <br>
 [Megan Swenson](https://github.com/megswen) <br>
 [Riley Chatwin](https://github.com/Rileychatwin)
