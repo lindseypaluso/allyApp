@@ -1,0 +1,22 @@
+    <!-- Default form new message -->
+<div class="w-50 m-auto">
+<form class="text-center border border-light p-5" id="compose" name="compose" method="post" action="/messages/compose">
+
+    <p class="h4 mb-4">Send New Message</p>
+
+    <!-- Subject -->
+    <input type="text" id="subject" name="subject" class="form-control mb-4" placeholder="Message Subject">
+
+    <!-- Body of Message -->
+    <textarea id="body" name="body" class="form-control mb-4" placeholder="Your Message"></textarea>
+
+    <input type="text" id="fromid" name="fromid" />
+    <input type="text" id="toid" name="toid" value={{toid}} />
+
+    <!-- Sign in button -->
+    <button class="btn btn-info btn-block my-4" type="submit">Send</button>
+
+</form>
+
+
+</div>

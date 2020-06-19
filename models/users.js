@@ -4,8 +4,6 @@ module.exports = function(sequelize, DataTypes) {
         passHash: DataTypes.STRING,
         status: DataTypes.INTEGER
     });
-   
-
     
     return Users;
 };

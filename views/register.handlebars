@@ -1,7 +1,28 @@
-<form id="register" name="register" method="post" action="/users/register">
-        <label for="username">username</label>
-        <input class="text" name="username" type="username" />
-        <label for="passHash">Password</label>
-        <input name="passHash" type="password" />
-        <input class="btn" type="submit" value="Register" />
-    </form>
+    <!-- Default form register -->
+<div class="w-25 m-auto">
+<form class="text-center border border-light p-5" id="register" name="register" method="post" action="/users/register">
+
+    <p class="h4 mb-4">Register</p>
+
+    <!-- Username -->
+    <input type="username" id="username" name="username" class="form-control mb-4" placeholder="Username">
+
+    <!-- Password -->
+    <input type="password" id="passHash" name="passHash" class="form-control mb-4" placeholder="Password">
+
+<!-- Re-check Password -->
+    <input type="password" id="passHash2" name="passHash2" class="form-control mb-4" placeholder="Re-type Password">
+
+    <!-- Sign in button -->
+    <button class="btn btn-info btn-block my-4" type="submit">Register</button>
+
+    <!-- Login -->
+    <p>Already have an account?
+        <a href="/users/login">Login</a>
+    </p>
+
+</form>
+
+
+</div>
+<!-- Default form login -->

@@ -1,8 +1,35 @@
-<form id="login" name="login" method="post" action="/users/login">
-        <label for="username">username</label>
-        <input class="text" name="username" type="text" />
-        <label for="passHash">Password</label>
-        <input name="passHash" type="password" />
-        <input class="btn" type="submit" value="Login" />
-        <input id="referer" name="referer" value={{referer}} />
-    </form>
+<!-- Default form login -->
+<div class="w-25 m-auto">
+<form class="text-center border border-light p-5" id="login" name="login" method="post" action="/users/login">
+
+    <p class="h4 mb-4">Login</p>
+
+    <!-- Username -->
+    <input type="username" id="username" name="username" class="form-control mb-4" placeholder="Username">
+
+    <!-- Password -->
+    <input type="password" id="passHash" name="passHash" class="form-control mb-4" placeholder="Password">
+
+    <div class="d-flex justify-content-around">
+        <div>
+            <!-- Remember me -->
+            <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="defaultLoginFormRemember">
+                <label class="custom-control-label" for="defaultLoginFormRemember">Remember me</label>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sign in button -->
+    <button class="btn btn-info btn-block my-4" type="submit">Login</button>
+
+    <!-- Register -->
+    <p>Not a member?
+        <a href="/users/register">Register</a>
+    </p>
+
+</form>
+
+
+</div>
+<!-- Default form login -->

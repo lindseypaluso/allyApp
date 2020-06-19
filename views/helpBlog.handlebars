@@ -72,7 +72,7 @@
       {{#each data}}
       <div class="card">
         <div class="card-header">
-          <button class="connect btn btn-primary">Connect</button>
+          <button class="connect btn btn-primary" onclick="location.href='/messages/compose/{{dataValues.uid}}'">Connect</button>
           <h4>Title: {{dataValues.title}}</h4>
           <p>Created: {{dataValues.createdAt}}</p>
           <p id="blogName">Username: {{dataValues.username}}</p>
