@@ -1,6 +1,10 @@
 module.exports = function (sequelize, DataTypes) {
     var Help = sequelize.define("Help", {
-        name: {
+        uid: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+        },
+        username: {
             type: DataTypes.STRING,
             allowNull: false,
             validate: {
@@ -20,6 +24,5 @@ module.exports = function (sequelize, DataTypes) {
             len: [1]
         },
     });
-
     return Help;
 };
