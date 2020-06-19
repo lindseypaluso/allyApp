@@ -170,17 +170,11 @@ passport.serializeUser(function(user, done) {
 
 // deserialize user 
 passport.deserializeUser(function(id, done) {
- 
     Users.findByPk(id).then(function(user) {
- 
         if (user) {
- 
             done(null, user.get());
- 
         } else {
- 
             done(user.errors, null);
- 
         }
  
     });

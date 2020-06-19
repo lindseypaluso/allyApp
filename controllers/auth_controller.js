@@ -7,17 +7,7 @@ exports.register = function(req, res) {
 }
 
 exports.login = function(req, res) {
- 
-    res.render('login');
- 
-}
-
-exports.logout = function(req, res) {
- 
-    req.session.destroy(function(err) {
- 
-        res.redirect('/');
- 
-    });
+ 	var referer = req.headers.referer;
+    res.render('login', {referer});
  
 }
