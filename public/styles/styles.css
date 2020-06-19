@@ -115,6 +115,9 @@ a:hover {
 /*====================================== LIBRARY page styling====================================== */
 .lib-btn {
   font-size: 13pt;
+  background-color: #ddd;
+  min-height: 80px;
+  width: 100%;
 }
 #filter-menu button:hover {
   border-bottom: solid;
@@ -131,15 +134,17 @@ a:hover {
   display: none;
 }
 .filterDiv .item img {
-  height: 50%;
   margin-bottom: 10px;
+  max-width: 100%;
 }
 .filterDiv .item {
-  margin-bottom: 30px;
   background-color: whitesmoke;
-  padding: 20px;
+  padding: 15px;
   border: none;
   border-radius: 5%;
+  width: 100%;
+  height: max-content;
+  float: left;
 }
 .filterDiv a {
   text-decoration: none;
