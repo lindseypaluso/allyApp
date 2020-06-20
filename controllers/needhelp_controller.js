@@ -10,17 +10,16 @@ module.exports = function (app) {
   });
 
   // POST route to save help requests
-   app.post("/helpBlog", function (req, res) {
-     db.Help.create({
-       uid: req.body.help_userid,
-       username: req.body.help_username,
-       title: req.body.title,
-       body: req.body.body
-  //     //Any other columns?
-     }).then(function (data) {
-       res.redirect("/helpBlog");
+  app.post("/helpBlog", function (req, res) {
+    db.Help.create({
+      uid: req.body.help_userid,
+      username: req.body.help_username,
+      title: req.body.title,
+      body: req.body.body
+    }).then(function (data) {
+      res.redirect("/helpBlog");
     });
-   });
+  });
 
   // DELETE route to delete help requests
   // app.delete("/needhelp/:id", function (req, res) {

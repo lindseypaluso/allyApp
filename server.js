@@ -44,6 +44,8 @@ require("./controllers/library_controller.js")(app);
 require("./controllers/users_controller.js")(app);
 require("./controllers/needhelp_controller.js")(app);
 require("./controllers/messages_controller.js")(app);
+require("./controllers/petitions_controller.js")(app);
+require("./controllers/signatures_controller.js")(app);
 require("./routes/htmlRoutes.js")(app);
 require("./routes/apiRoutes.js")(app);
 
@@ -53,7 +55,7 @@ require('./config/passport.js')(passport, db.Users);
 
 // Syncing our sequelize models and then starting our Express app
 // =============================================================
-db.sequelize.sync({ force: false }).then(function() {
+db.sequelize.sync({ force: true }).then(function() {
   app.listen(PORT, function() {
     console.log("App listening on PORT " + PORT);
   });
