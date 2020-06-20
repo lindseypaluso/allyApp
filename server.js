@@ -44,6 +44,8 @@ require("./controllers/library_controller.js")(app);
 require("./controllers/users_controller.js")(app);
 require("./controllers/needhelp_controller.js")(app);
 require("./controllers/messages_controller.js")(app);
+require("./controllers/petitions_controller.js")(app);
+require("./controllers/signatures_controller.js")(app);
 require("./routes/htmlRoutes.js")(app);
 require("./routes/apiRoutes.js")(app);
 

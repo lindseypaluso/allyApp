@@ -40,7 +40,7 @@
                         <li class="nav-item active"><a href="/" class="text-secondary nav-link active">Home<span
                                     class="sr-only">(current)</span></a></li>
                         <li class="nav-item"><a href="/library" class="text-secondary nav-link">Library</a></li>
-                        <li class="nav-item"><a href="#" class="text-secondary nav-link">Petitions</a></li>
+                        <li class="nav-item"><a href="/petitions" class="text-secondary nav-link">Petitions</a></li>
                         <li class="nav-item"><a href="/helpBlog" class="text-secondary nav-link">Need Help?</a></li>
                     </ul>
                 </div>
@@ -48,16 +48,19 @@
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item">
                             <!--Link to Login Page-->
-                            <a class="nav-link login-link" href="/users/login">
+                            <a class="nav-link login-link" href="/users/login"><span class="icon-box"><i class="fa fa-user-o fa-xxs text-white"></i></span>
+                                    <span id="loggedin">Login/Register</span></A>
+                            <!--Link to Logout Page-->
+                            <a class="nav-link login-link" href="/users/logout">Logout</a>
                                 <!--Avatar img displays in far right corner-->
-                                <div class="user-avatar-div">
-                                    <span class="icon-box"><i class="fa fa-user-o fa-xxs text-white"></i></span>
-                                    <span id="loggedin">Login/Register</span>
+                                {{!-- <div class="user-avatar-div"> --}}
+                                    
                                 </div>
                             </a> 
                         </li>
                     </ul>
                 </div>
+
             </div>
         </nav>
     </header>
