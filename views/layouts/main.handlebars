@@ -27,42 +27,40 @@
         <nav class="homepage-nav navbar navbar-expand-md static-top p-0 fixed-top" id="navlinks">
             <div class="container-fluid">
                 <!--Ally App Logo?-->
-                <div id="logo" class="text-dark mr-3">
+                <div id="logo" class="text-white mr-3 mt-2">
                     <h4>The</h4>
                     <h4><strong>Ally</strong></h4>
-                    <h4 class="text-secondary">App</h4>
+                    <h4 class="">App</h4>
                 </div>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbarNav">
-                    <span class="text-secondary navbar-toggler-icon"></span>
+                <button class="navbar-toggler text-white" type="button" data-toggle="collapse" data-target=".navbarNav">
+                    <span class="text-white navbar-toggler-icon"></span>
                 </button>
                 <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2 navbarNav">
                     <ul class="navbar-nav mr-auto">
-                        <li class="nav-item active"><a href="/" class="text-secondary nav-link active">Home<span
+                        <li class="nav-item active"><a href="/" class="nav-link active">Home<span
                                     class="sr-only">(current)</span></a></li>
-                        <li class="nav-item"><a href="/library" class="text-secondary nav-link">Library</a></li>
-                        <li class="nav-item"><a href="#" class="text-secondary nav-link">Petitions</a></li>
-                        <li class="nav-item"><a href="/helpBlog" class="text-secondary nav-link">Need Help?</a></li>
+                        <li class="nav-item"><a href="/library" class="nav-link">Library</a></li>
+                        <li class="nav-item"><a href="/petitions" class="nav-link">Petitions</a></li>
+                        <li class="nav-item"><a href="/helpBlog" class="nav-link">Need Help?</a></li>
+
                     </ul>
                 </div>
                 <div class="navbar-collapse collapse w-100 order-3 dual-collapse2 navbarNav">
                     <ul class="navbar-nav ml-auto">
-                        <li class="nav-item">
-                            <!--Link to Login Page-->
-                            <a class="nav-link login-link" href="/users/login">
-                                <!--Avatar img displays in far right corner-->
-                                <div class="user-avatar-div">
-                                    <span class="icon-box"><i class="fa fa-user-o fa-xxs text-white"></i></span>
-                                    <span id="loggedin">Login/Register</span>
-                                </div>
-                            </a> 
-                        </li>
+                        <!--Link to Login Page-->
+                        <li class="nav-item"><a class="nav-link login-link" href="/users/login">
+                                <span id="loggedin">Login/Register</span></a></li>
+                        <li class="nav-item mt-3"><span class="icon-box"><i class="fa fa-user-o fa-xxs text-white"></i></span></li>
+                        <!--Link to Logout Page-->
+                        <li class="nav-item"><a class="nav-link login-link" href="/users/logout">Logout</a></li>
                     </ul>
                 </div>
+
             </div>
         </nav>
     </header>
     <!--Initial section with image-->
-    <img src="/img/fists.png" alt="fists" id="fists" />
+    <img src="/img/allyAppBanner-blue.png" alt="fists" id="fists" />
     <br>
     <br>
     {{{body}}}

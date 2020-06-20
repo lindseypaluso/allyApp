@@ -1,8 +1,8 @@
 $(document).ready(function(){
     $('.connect').hide();
-    //$('#toid').hide();
-    //$('#helpid').hide();
-    //$('#parentid').hide();
+    $('#toid').hide();
+    $('#helpid').hide();
+    $('#parentid').hide();
     $.ajax({
       url: "/users/authenticate",
       type: 'GET',
@@ -15,7 +15,6 @@ $(document).ready(function(){
             $('#help_username').val(res.username).hide();
             $('.connect').show();
             $('.help-login-protected').html('<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop">Add to Ally Blog</button>');
-            
           } 
       }
     });
@@ -51,12 +50,18 @@ $(document).ready(function(){
     }
   });
 
-
-
-
-
-
-
-
-  
 });
+
+//========================Scrolling Navbar=====================
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrolltop > 180 || document.documentElement.scrollTop > 180) {
+    document.getElementById("navlinks").style.top = "0";
+    document.getElementById("navlinks").style.height = "100px";
+    document.getElementById("navlinks").style.backgroundColor = "rgb(0, 176, 240)";
+  } else {
+    document.getElementById("navlinks").style.backgroundColor = "transparent";
+    document.getElementById("logo").style.display = "block";
+  }
+}

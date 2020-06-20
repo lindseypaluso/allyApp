@@ -134,7 +134,7 @@ If you'd like to create an account (which is necessary for posting and messaging
 * jQuery
 
 ### Back-end Technologies
-* Nose.js
+* Node.js
 * MySQL
 * Sequelize
 * Express

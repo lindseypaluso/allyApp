@@ -1,28 +1,25 @@
     <!-- Default form register -->
 <div class="w-25 m-auto">
-<form class="text-center border border-light p-5" id="register" name="register" method="post" action="/users/register">
+    <h1 class="text-center register-header mb-5 mt-5 text-body"><strong>Register</strong></h1>
+    <form class="text-center register-form border border-light p-5 mb-5" id="register" name="register" method="post" action="/users/register">
 
-    <p class="h4 mb-4">Register</p>
+        <!-- Username -->
+        <input type="username" id="username" name="username" class="form-control mb-4" placeholder="Username">
 
-    <!-- Username -->
-    <input type="username" id="username" name="username" class="form-control mb-4" placeholder="Username">
+        <!-- Password -->
+        <input type="password" id="passHash" name="passHash" class="form-control mb-4" placeholder="Password">
 
-    <!-- Password -->
-    <input type="password" id="passHash" name="passHash" class="form-control mb-4" placeholder="Password">
+        <!-- Re-check Password -->
+        <input type="password" id="passHash2" name="passHash2" class="form-control mb-4" placeholder="Re-type Password">
 
-<!-- Re-check Password -->
-    <input type="password" id="passHash2" name="passHash2" class="form-control mb-4" placeholder="Re-type Password">
+        <!-- Sign in button -->
+        <button class="btn register-btn btn-block my-4" type="submit">Register</button>
 
-    <!-- Sign in button -->
-    <button class="btn btn-info btn-block my-4" type="submit">Register</button>
+        <!-- Login -->
+        <p>Already have an account?
+            <a href="/users/login">Login</a>
+        </p>
 
-    <!-- Login -->
-    <p>Already have an account?
-        <a href="/users/login">Login</a>
-    </p>
-
-</form>
-
+    </form>
 
 </div>
-<!-- Default form login -->
