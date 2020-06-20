@@ -155,6 +155,42 @@ form input.error {
 
 /*====================================== Responsive Styling ====================================== */
 /* When the screen is less than 600px wide, stack the links and the search field vertically instead of horizontally */
-@media screen and (max-width: 600px) {
+/* @media screen and (max-width: 600px) { */
 
+/* ======================================== Login Page Styling ====================================== */
+.login-header {
+  font-size: 40pt;
+}
+
+.login-form {
+  font-size: 10pt;
+  background-color: rgb(242, 242, 242);
+  box-shadow: .5px .5px rgb(9, 89, 118);
+  color: black;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.login-btn {
+  background-color: rgb(83, 191, 230);
+  color: white;
+}
+
+/* ========================================== Register Page Styling ==================================== */
+.register-header {
+  font-size: 40pt;
+}
+
+.register-form {
+  font-size: 10pt;
+  background-color: rgb(242, 242, 242);
+  box-shadow: .5px .5px rgb(9, 89, 118);
+  color: black;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.register-btn {
+  background-color: rgb(83, 191, 230);
+  color: white;
 }
