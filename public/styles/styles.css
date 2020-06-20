@@ -151,6 +151,25 @@ form input.error {
   border: 1px solid red;
 }
 
+@media screen and (max-width: 785px) {
+  #ally {
+    font-size: 50px;
+  }
+  #ally1 {
+    font-size: 30px;
+  }
+  #ally2 {
+    font-size: 15px;
+  }
+  #pos {
+    font-size: 20px;
+  }
+  #definition {
+    font-size: 15px;
+    
+  }
+}
+
 /*====================================== Responsive Styling ====================================== */
 /* When the screen is less than 600px wide, stack the links and the search field vertically instead of horizontally */
 @media screen and (max-width: 600px) {

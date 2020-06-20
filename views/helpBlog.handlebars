@@ -1,13 +1,13 @@
 <div class="container">
   <div class="card ally-box text-center">
-    <h1 class="display-1 ally">ally</h1>
+    <h1 id="ally" class="display-1 ally">ally</h1>
     <blockquote class="blockquote mb-0">
-      <h4 class="font-italic noun">noun:</h4>
-      <p>One that is associated with another as a helper; a person or group that
+      <h4 id="pos" class="font-italic noun">noun:</h4>
+      <p id="definition">One that is associated with another as a helper; a person or group that
         provides assistance and support in an ongoing effort, activity, or struggle.
       </p>
-      <h4 class="font-italic verb">verb:</h4>
-      <p>To unite or form a connection or relation between; associate.
+      <h4 id="pos" class="font-italic verb">verb:</h4>
+      <p id="definition">To unite or form a connection or relation between; associate.
       </p>
       <footer class="blockquote-footer text-secondary">
         <small>
@@ -17,14 +17,12 @@
     </blockquote>
   </div>
 </div>
-<div class="container help-box">
-  <div class="needhelp-box text-center">
-    <h1>Need help?</h1>
-    <h3>Submit a request for help below!</h3>
-  </div>
+<div class="container help-box text-center">
+  <h1 id="ally1">Need help?</h1>
+  <h3 id="ally2">Submit a request for help below!</h3>
   <div class="row">
 
-    <div class="col-md-12 col-sm-6 text-center" id="filter-menu">
+    <div class="col-md-12 col-sm-4 text-center" id="filter-menu">
       <div class="help-login-protected">
         <!-- Button trigger modal -->
         <button type="button" class="btn btn-primary" id="help-post" onclick="window.location='/users/login'">
@@ -33,58 +31,56 @@
       </div>
     </div>
   </div>
-</div>
 
-<!-- Form Modal -->
-<div class="modal fade" id="form" data-backdrop="static" tabindex="-1" role="dialog"
-  aria-labelledby="staticBackdropLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="staticBackdropLabel">Request Help</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <form id="helpForm" method="POST" action="/helpBlog">
-          <div class="form-group">
-            <label for="title">Subject:</label>
-            <input placeholder="Blog Title" type="text" class="form-control" id="title" name="title">
-            <br />
-            <label for="body">Description:</label>
-            <textarea placeholder="Describe the situation and the type of help you need from an ally."
-              class="form-control" rows="10" id="body" name="body"></textarea>
-            <input type="textfield" id="help_userid" name="help_userid" />
-            <input type="textfield" id="help_username" name="help_username" />
-          </div>
-          <div class=" modal-footer">
-            <button type="submit" class="btn btn-primary submit">Submit</button>
-          </div>
-        </form>
-      </div>
-    </div>
-  </div>
-</div>
-</div>
-<div class="row">
-  <div class="col-md-12 blog-container">
-    {{#each data}}
-    <div class="card">
-      <div class="card-header">
-        <button class="connect btn btn-primary"
-          onclick="location.href='/messages/compose/{{dataValues.uid}}'">Connect</button>
-        <h4>Title: {{dataValues.title}}</h4>
-        <p>Created: {{dataValues.createdAt}}</p>
-        <p id="blogName">Username: {{dataValues.username}}</p>
-      </div>
-      <div class="card-body">
-        <p>Description: {{dataValues.body}}</p>
+  <!-- Form Modal -->
+  <div class="modal fade" id="staticBackdrop" data-backdrop="static" tabindex="-1" role="dialog"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">Request Help</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form id="helpForm" method="POST" action="/helpBlog">
+            <div class="form-group">
+              <label for="title">Subject:</label>
+              <input placeholder="Blog Title" type="text" class="form-control" id="title" name="title">
+              <br />
+              <label for="body">Description:</label>
+              <textarea placeholder="Describe the situation and the type of help you need from an ally."
+                class="form-control" rows="10" id="body" name="body"></textarea>
+              <input type="textfield" id="help_userid" name="help_userid" />
+              <input type="textfield" id="help_username" name="help_username" />
+            </div>
+            <div class=" modal-footer">
+              <button type="submit" class="btn btn-primary submit">Submit</button>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
   </div>
-  {{/each}}
-</div>
+  <div class="row">
+    <div class="col-md-12 blog-container">
+      {{#each data}}
+      <div class="card">
+        <div class="card-header">
+          <button class="connect btn btn-primary"
+            onclick="location.href='/messages/compose/{{dataValues.uid}}'">Connect</button>
+          <h4>Title: {{dataValues.title}}</h4>
+          <p>Created: {{dataValues.createdAt}}</p>
+          <p id="blogName">Username: {{dataValues.username}}</p>
+        </div>
+        <div class="card-body">
+          <p>Description: {{dataValues.body}}</p>
+        </div>
+      </div>
+      {{/each}}
+    </div>
+  </div>
 </div>
 <!-- SCRIPT FOR MODALS -->
 <script>
