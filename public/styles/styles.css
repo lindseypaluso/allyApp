@@ -123,12 +123,14 @@ a:hover {
 
 .ally-box {
   background-color: rgb(253, 232, 208);
-  border: none;
-  padding: 30px 30px 50px 30px;
+  padding: 20px 180px 30px 180px;
+  margin-bottom: 10px;
+  border-width: 2px;
+  margin-top: -25px;
 }
 
 .ally {
-  margin-bottom: 30px;
+  margin-bottom: 15px;
 }
 
 .needhelp-box {
@@ -144,13 +146,43 @@ a:hover {
   width: 300px;
 }
 
-
 form .error {
     color: red;
 }
 
 form input.error {
   border: 1px solid red;
+}
+.modal-content {
+  background-color: rgb(247, 228, 210);
+  color: black;
+}
+
+#title.form-control, #body.form-control {
+  background-color: rgb(250, 248, 245);
+}
+
+.blog-container {
+  margin-top: 10px;
+  color: black;
+}
+
+@media screen and (max-width: 785px) {
+  #ally {
+    font-size: 50px;
+  }
+  #ally1 {
+    font-size: 30px;
+  }
+  #ally2 {
+    font-size: 15px;
+  }
+  #pos {
+    font-size: 20px;
+  }
+  #definition {
+    font-size: 15px;
+  }
 }
 
 /*====================================== Responsive Styling ====================================== */
