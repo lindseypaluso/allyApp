@@ -48,12 +48,18 @@ $(document).ready(function(){
     }
   });
 
-
-
-
-
-
-
-
-  
 });
+
+//========================Scrolling Navbar=====================
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrolltop > 180 || document.documentElement.scrollTop > 180) {
+    document.getElementById("navlinks").style.top = "0";
+    document.getElementById("navlinks").style.height = "100px";
+    document.getElementById("navlinks").style.backgroundColor = "rgb(0, 176, 240)";
+  } else {
+    document.getElementById("navlinks").style.backgroundColor = "transparent";
+    document.getElementById("logo").style.display = "block";
+  }
+}
