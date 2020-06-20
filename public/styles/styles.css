@@ -11,49 +11,30 @@ body {
   padding-top: 10px;
 }
 h4 {line-height: 0.8;}
-/*======================================Navbar/Header styling======================================*/
-/* actually only need this image on the home page
-  header {
-  background-image: url(../img/fists.png);
-  
-} */
 
+/*======================================Navbar/Header styling======================================*/
 .navbar {
   overflow: hidden;
 }
 .navbar a {
   float: left;
   display: block;
-  color: darkgray;
   text-align: center;
-
   text-decoration: none;
   font-size: 17px;
 }
 a:hover {
   border-bottom: solid;
-  border-bottom-color: rgb(253, 232, 208);
+  border-bottom-color: rgb(83, 191, 230);
 }
 /* Style the "active" element to highlight the current page */
 .navbar a.active {
-  color: black;
   font-style: bold;
 }
 /* Style the search box inside the navigation bar */
 .navbar .search-container {
   float: right;
   position: absolute;
-  
-}
-.navbar input[type=text] {
-  /* float: right; */
-  padding: 6px;
-  margin-top: 8px;
-  margin-right: 16px;
-  font-size: 17px;
-  border-radius: 25%;
-  border: none;
-  width: 120px;
 }
 .nav-link {
   float: left;
@@ -64,34 +45,10 @@ a:hover {
   text-decoration: none;
   font-size: 17px;
 }
-#search-button {
-  box-sizing: content-box;
-  margin-top: 6px;
-  width: 20px;
-  height: 30px;
-  line-height: 30px;
-  text-align: center;
-  border-radius: 50%;
-  font-size: 18px; 
-  background: #ddd;
-  border: none;
-  cursor: pointer;
-}
-.user-avatar-div {
-  box-sizing: content-box;
-  background-color: rgb(253, 232, 208);
-  position: relative;
-  padding-left: 4px;
-  width: 30px;
-  height: 30px;
-  line-height: 30px;
-  text-align: center;
-  border-radius: 50%;
-  font-size: 18px; 
-}
 #fists {
   width: 100%;
 }
+
 /*====================================== HOME page styling====================================== */
 .media-img {
   width: 100%;
@@ -103,27 +60,29 @@ a:hover {
 }
 #myCarousel h3 {
   font-size: 28pt;
-  text-shadow: 2px 2px grey;
+  text-shadow: .5px .5px grey;
 }
 .mission-statement h2 {
   font-size: 40pt;
 }
 .carousel-caption {
-  color: rgb(253, 232, 208);
+  color: whitesmoke;
 }
 /*====================================== LIBRARY page styling====================================== */
 .library h1 {
   font-size: 40pt;
 }
 .lib-btn {
-  font-size: 13pt;
-  background-color: #ddd;
-  min-height: 80px;
+  font-size: 10pt;
+  background-color: rgb(242, 242, 242);
+  box-shadow: .5px .5px rgb(9, 89, 118);
+  color: black;
+  min-height: 50px;
   width: 100%;
 }
 #filter-menu button:hover {
   border-bottom: solid;
-  border-bottom-color: rgb(253, 232, 208);
+  border-bottom-color: rgb(83, 191, 230);
 }
 .filterDiv {
   display: none;
@@ -140,8 +99,8 @@ a:hover {
   max-width: 100%;
 }
 .filterDiv .item {
-  background-color: whitesmoke;
-  padding: 15px;
+  background-color: rgb(242, 242, 242);
+  box-shadow: .5px .5px rgb(9, 89, 118);  padding: 15px;
   border: none;
   border-radius: 5%;
   width: 100%;
@@ -152,21 +111,6 @@ a:hover {
   text-decoration: none;
   font-size: 17px;
   color: darkgray;
-}
-
-/* When the screen is less than 600px wide, stack the links and the search field vertically instead of horizontally */
-@media screen and (max-width: 600px) {
-  .navbar a, .navbar input[type=text] {
-    float: none;
-    display: block;
-    text-align: left;
-    width: 100%;
-    margin: 0;
-    padding: 14px;
-  }
-  .navbar input[type=text] {
-    border: 1px solid #ccc;
-  }
 }
 
 /*====================================== NEED HELP page styling====================================== */
@@ -205,4 +149,20 @@ form .error {
 
 form input.error {
   border: 1px solid red;
+}
+
+/*====================================== Responsive Styling ====================================== */
+/* When the screen is less than 600px wide, stack the links and the search field vertically instead of horizontally */
+@media screen and (max-width: 600px) {
+  .navbar a, .navbar input[type=text] {
+    float: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    padding: 14px;
+  }
+  .navbar input[type=text] {
+    border: 1px solid #ccc;
+  }
 }

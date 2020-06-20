@@ -23,7 +23,6 @@ function filterSelection(c) {
     if (c == "all" || c == "") {
       addClass(x[i], "show");
     };
-    if (x[i].className.indexOf(c) > -1) addClass(x[i], "show");
   }
   console.log("working");
 }
