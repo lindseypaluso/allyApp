@@ -17,9 +17,9 @@
     </blockquote>
   </div>
 </div>
-<div class="container help-box text-center">
-  <h1 id="ally1">Need help?</h1>
-  <h3 id="ally2">Submit a request for help below!</h3>
+<div class="container help-box">
+  <h2 class="text-center" id="ally1">Need help?</h2>
+  <h4 class="text-center" id="ally2">Submit a request for help below!</h4>
   <div class="row">
 
     <div class="col-md-12 col-sm-4 text-center" id="filter-menu">
@@ -66,7 +66,7 @@
   <div class="row">
     <div class="col-md-12 blog-container">
       {{#each data}}
-      <div class="card">
+      <div class="card border border-secondary">
         <div class="card-header">
           <button class="connect btn btn-primary"
             onclick="location.href='/messages/compose/{{dataValues.uid}}'">Connect</button>

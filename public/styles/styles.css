@@ -123,12 +123,14 @@ a:hover {
 
 .ally-box {
   background-color: rgb(253, 232, 208);
-  border: none;
-  padding: 30px 180px 50px 180px;
+  padding: 20px 180px 30px 180px;
+  margin-bottom: 10px;
+  border-width: 2px;
+  margin-top: -25px;
 }
 
 .ally {
-  margin-bottom: 30px;
+  margin-bottom: 15px;
 }
 
 .needhelp-box {
@@ -144,13 +146,25 @@ a:hover {
   width: 300px;
 }
 
-
 form .error {
     color: red;
 }
 
 form input.error {
   border: 1px solid red;
+}
+.modal-content {
+  background-color: rgb(247, 228, 210);
+  color: black;
+}
+
+#title.form-control, #body.form-control {
+  background-color: rgb(250, 248, 245);
+}
+
+.blog-container {
+  margin-top: 10px;
+  color: black;
 }
 
 @media screen and (max-width: 785px) {
@@ -168,7 +182,6 @@ form input.error {
   }
   #definition {
     font-size: 15px;
-    
   }
 }
 
