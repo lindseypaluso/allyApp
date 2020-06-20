@@ -12,7 +12,7 @@ $(document).ready(function(){
             $('#help_userid').val(res.id).hide();
             $('#help_username').val(res.username).hide();
             $('#fromid').val(res.id);
-            $('.help-login-protected').html('<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop">Add to Ally Blog</button>');
+            $('.help-login-protected').html('<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop">Submit Request for Help</button>');
           } 
       }
     });
