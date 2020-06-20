@@ -17,7 +17,7 @@
     </div>
 
     <!-- Form Modal -->
-    <div class="modal fade" id="form" data-backdrop="static" tabindex="-1" role="dialog"
+    <div class="modal fade" id="staticBackdrop" data-backdrop="static" tabindex="-1" role="dialog"
         aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
@@ -28,16 +28,20 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <form id="petitionForm" method="POST" action="/petitionList">
+                    <form id="petitionForm" method="POST" action="/petitions">
                         <div class="form-group">
-                            <label for="title">Subject:</label>
-                            <input placeholder="Blog Title" type="text" class="form-control" id="title" name="title">
+                            <label for="title">Name Your Petition:</label>
+                            <input placeholder="Name" type="text" class="form-control" id="title" name="title">
                             <br />
-                            <label for="body">Description:</label>
+                            <label for="body">What's Your Petition About?</label>
                             <textarea placeholder="Describe the purpose of this petition." class="form-control"
                                 rows="10" id="body" name="body"></textarea>
                             <input type="textfield" id="petition_userid" name="petition_userid" />
                             <input type="textfield" id="petition_username" name="petition_username" />
+
+                            <label for="goal">How Many Signatures Are You Trying To Acquire?</label>
+                            <input placeholder="Goal #" type="text" class="form-control" id="goal" name="goal">
+                            <br />
                         </div>
                         <div class=" modal-footer">
                             <button type="submit" class="btn btn-primary submit">Submit</button>
@@ -52,20 +56,60 @@
             {{#each data}}
             <div class="card">
                 <div class="card-header">
-                    <button class="signature btn btn-primary"
-                        onclick="location.href='/messages/compose/{{dataValues.uid}}'">See Signatures</button>
                     <h4>Title: {{dataValues.title}}</h4>
                     <p>Created: {{dataValues.createdAt}}</p>
                     <p id="petitionName">Username: {{dataValues.username}}</p>
                 </div>
                 <div class="card-body">
                     <p>Description: {{dataValues.body}}</p>
+                    <button type="button" class="btn btn-primary signature" data-toggle="modal" data-target="#signPetition{{dataValues.id}}">Sign!</button>
                 </div>
+
+
+                <div class="progress w-75 m-4">
+                  <div class="progress-bar" role="progressbar" style="width: {{dataValues.sigCount}}%;" aria-valuenow="{{dataValues.sigCount}}" aria-valuemin="0" aria-valuemax="{{dataValues.goal}}"></div>
+                  {{dataValues.sigCount}} / {{dataValues.goal}}
+                </div>
+
             </div>
             {{/each}}
         </div>
     </div>
 </div>
+
+{{#each data}}
+// Sign Modals
+<!-- Form Modal -->
+    <div class="modal fade" id="signPetition{{dataValues.id}}" data-backdrop="static" tabindex="-1" role="dialog"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Sign Now!</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="petitionForm" method="POST" action="/sign">
+                        <div class="form-group">
+                        Are you sure?
+                        <input type="textfield" style="display:none" id="signature_petitions_id" name="signature_petitions_id" value="{{dataValues.id}}" />
+                        </div>
+                        <div class=" modal-footer">
+                            <button type="submit" class="btn btn-primary submit">Sign</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{{/each}}
+
+
+
+
 <!-- SCRIPT FOR MODALS -->
 <script>
     $(function () {

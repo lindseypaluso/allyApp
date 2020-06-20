@@ -1,18 +1,27 @@
 $(document).ready(function(){
-    $('#referer').hide();
-    $('#fromid').hide();
+    $('.connect').hide();
+    $('.signature').hide();
+    $('#signature_petitions_id').hide();
     $('#toid').hide();
+    $('#helpid').hide();
+    $('#parentid').hide();
     $.ajax({
       url: "/users/authenticate",
       type: 'GET',
       success: function(res) {
           if(typeof res !== "undefined" && res !== "" && res){
             $('#loggedin').html(res.username);
+            $('#fromid').val(res.id).hide();
             $('.login-link').attr("href", "/messages/all/"+res.id);
             $('#help_userid').val(res.id).hide();
+            $('#signature_userid').val(res.id).hide();
             $('#help_username').val(res.username).hide();
-            $('#fromid').val(res.id);
-            $('.help-login-protected').html('<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop">Submit Request for Help</button>');
+            $('#petition_userid').val(res.id).hide();
+            $('#petition_username').val(res.username).hide();
+            $('.connect').show();
+            $('.signature').show();
+            $('.help-login-protected').html('<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop">Add to Ally Blog</button>');
+            $('.petition-login-protected').html('<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop">Create Petition</button>');
           } 
       }
     });
