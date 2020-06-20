@@ -3,7 +3,7 @@
 }
 body {
   background-color: white;
-  color: gray;
+  color: grey;
   font-family: 'Montserrat', sans-serif;
 }
 #logo {
@@ -39,7 +39,7 @@ a:hover {
 .nav-link {
   float: left;
   display: block;
-  color: darkgray;
+  color: white;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -63,10 +63,12 @@ a:hover {
   text-shadow: .5px .5px grey;
 }
 .mission-statement h2 {
-  font-size: 40pt;
+  font-size: 35pt;
 }
 .carousel-caption {
-  color: whitesmoke;
+  color: rgb(255, 255, 155);
+  /* color: rgb(190, 237, 254); */
+  font-style: bold;
 }
 /*====================================== LIBRARY page styling====================================== */
 .library h1 {
