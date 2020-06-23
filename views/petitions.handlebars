@@ -8,7 +8,7 @@
         <div class="col-md-12 col-sm-6 text-center" id="filter-menu">
             <div class="petition-login-protected">
                 <!-- Button trigger modal -->
-                <button type="button" class="btn btn-primary" id="petition-post"
+                <button type="button" class="btn" id="petition-post"
                     onclick="window.location='/users/login'">
                     Login/Register
                 </button>
@@ -30,21 +30,21 @@
                 <div class="modal-body">
                     <form id="petitionForm" method="POST" action="/petitions">
                         <div class="form-group">
-                            <label for="title">Name Your Petition:</label>
+                            <label for="title" class="mt-3 mb-1">Name Your Petition:</label>
                             <input placeholder="Name" type="text" class="form-control" id="title" name="title">
                             <br />
-                            <label for="body">What's Your Petition About?</label>
+                            <label for="body" class="mt-3 mb-1">What's Your Petition About?</label>
                             <textarea placeholder="Describe the purpose of this petition." class="form-control"
                                 rows="10" id="body" name="body"></textarea>
                             <input type="textfield" id="petition_userid" name="petition_userid" />
                             <input type="textfield" id="petition_username" name="petition_username" />
 
-                            <label for="goal">How Many Signatures Are You Trying To Acquire?</label>
+                            <label for="goal" class="mt-3 mb-1">How Many Signatures Are You Trying To Acquire?</label>
                             <input placeholder="Goal #" type="text" class="form-control" id="goal" name="goal">
                             <br />
                         </div>
                         <div class=" modal-footer">
-                            <button type="submit" class="btn btn-primary submit">Submit</button>
+                            <button type="submit" class="btn mt-3 mb-1 submit">Submit</button>
                         </div>
                     </form>
                 </div>
@@ -62,7 +62,7 @@
                 </div>
                 <div class="card-body">
                     <p>Description: {{dataValues.body}}</p>
-                    <button type="button" class="btn btn-primary signature" data-toggle="modal" data-target="#signPetition{{dataValues.id}}">Sign!</button>
+                    <button type="button" class="btn signature" data-toggle="modal" data-target="#signPetition{{dataValues.id}}">Sign!</button>
                 </div>
 
 
@@ -78,7 +78,7 @@
 </div>
 
 {{#each data}}
-// Sign Modals
+{{!-- // Sign Modals --}}
 <!-- Form Modal -->
     <div class="modal fade" id="signPetition{{dataValues.id}}" data-backdrop="static" tabindex="-1" role="dialog"
         aria-labelledby="staticBackdropLabel" aria-hidden="true">
@@ -96,8 +96,8 @@
                         Are you sure?
                         <input type="textfield" style="display:none" id="signature_petitions_id" name="signature_petitions_id" value="{{dataValues.id}}" />
                         </div>
-                        <div class=" modal-footer">
-                            <button type="submit" class="btn btn-primary submit">Sign</button>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn submit">Sign</button>
                         </div>
                     </form>
                 </div>
