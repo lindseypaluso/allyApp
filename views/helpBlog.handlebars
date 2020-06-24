@@ -18,14 +18,13 @@
   </div>
 </div>
 <div class="container help-box">
-  <h2 class="text-center" id="ally1">Need help?</h2>
+  <h2 class="text-center mt-5" id="ally1">Need help?</h2>
   <h4 class="text-center" id="ally2">Submit a request for help below!</h4>
   <div class="row">
-
     <div class="col-md-12 col-sm-4 text-center" id="filter-menu">
       <div class="help-login-protected">
         <!-- Button trigger modal -->
-        <button type="button" class="btn btn-primary" id="help-post" onclick="window.location='/users/login'">
+        <button type="button" class="btn mt-2 mb-2" id="help-post" onclick="window.location='/users/login'">
           Login/Register
         </button>
       </div>
@@ -46,29 +45,29 @@
       <div class="modal-body">
         <form id="helpForm" method="POST" action="/helpBlog">
           <div class="form-group">
-            <label for="title">Subject:</label>
+            <label for="title" class="mt-3 mb-1">Subject:</label>
             <input placeholder="Blog Title" type="text" class="form-control" id="title" name="title">
             <br />
-            <label for="body">Description:</label>
+            <label for="body" class="mt-3 mb-1">Description:</label>
             <textarea placeholder="Describe the situation and the type of help you need from an ally."
               class="form-control" rows="10" id="body" name="body"></textarea>
             <input type="textfield" id="help_userid" name="help_userid" />
             <input type="textfield" id="help_username" name="help_username" />
           </div>
-          <div class=" modal-footer">
-            <button type="submit" class="btn btn-primary submit">Submit</button>
+          <div class="modal-footer">
+            <button type="submit" class="btn submit mt-3 mb-1">Submit</button>
           </div>
         </form>
       </div> <!-- / modal-body -->
     </div> <!-- / modal-content -->
   </div> <!-- / modal-dialog -->
 </div>
-  <div class="row">
+  <div class="row mb-5">
     <div class="col-md-12 blog-container">
       {{#each data}}
-      <div class="card border border-secondary">
-        <div class="card-header">
-          <button class="connect btn btn-primary" onclick="location.href='/messages/compose/{{dataValues.uid}}/{{dataValues.id}}/0'">Connect</button>
+      <div class="card border mt-5 mb-2">
+        <div class="card-header pt-3">
+          <button class="connect btn" onclick="location.href='/messages/compose/{{dataValues.uid}}/{{dataValues.id}}/0'">Connect</button>
           <h4>Title: {{dataValues.title}}</h4>
           <p>Created: {{dataValues.createdAt}}</p>
           <p id="blogName">Username: {{dataValues.username}}</p>

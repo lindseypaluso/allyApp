@@ -121,7 +121,7 @@ a:hover {
   margin: 5px;
 }
 
-.ally-box {
+/* .ally-box {
   background-color: rgb(253, 232, 208);
   padding: 20px 180px 30px 180px;
   margin-bottom: 10px;
@@ -135,16 +135,48 @@ a:hover {
 
 .needhelp-box {
   margin: 30px;
+} */
+
+.card {
+  background-color: rgb(249, 245, 245);
+  box-shadow: .5px .5px rgb(9, 89, 118);
+}
+.card-header {
+  background-color: rgb(235, 233, 233);
+}
+.card-header h4 {
+  margin-top: 10pt;
+  margin-bottom: 15pt;
+}
+#help-post {
+  background-color: rgb(0, 176, 240);
+}
+#petition-post {
+  background-color: rgb(0, 176, 240);
+}
+.ally-box {
+  background-color: rgb(255, 255, 218);
+  padding: 20px 180px 30px 180px;
+  margin-bottom: 10px;
+  box-shadow: .5px .5px rgb(9, 89, 118);
+}
+
+.connect {
+  background-color: rgb(0, 176, 240);
+  box-shadow: .5px .5px rgb(9, 89, 118);
 }
 
 .help-btn {
   margin: 0 auto;
-  font-size: 13pt;
-  background-color: #ddd;
-  min-height: 80px;
-  margin-bottom: 50px;
+  font-size: 10pt;
+  background-color: rgb(242, 242, 242);
+  box-shadow: .5px .5px rgb(9, 89, 118);
+  color: black;
+  min-height: 50px;
   width: 300px;
 }
+
+/* ============form section============ */
 
 form .error {
     color: red;
@@ -153,9 +185,17 @@ form .error {
 form input.error {
   border: 1px solid red;
 }
+.modal-header {
+  background-color: rgb(235, 233, 233);
+}
 .modal-content {
-  background-color: rgb(247, 228, 210);
+  background-color: rgb(249, 245, 245);
   color: black;
+  box-shadow: .5px .5px rgb(9, 89, 118);
+}
+.modal-footer btn {
+  background-color: rgb(0, 176, 240);
+  box-shadow: .5px .5px rgb(9, 89, 118);
 }
 
 #title.form-control, #body.form-control {
@@ -163,7 +203,6 @@ form input.error {
 }
 
 .blog-container {
-  margin-top: 10px;
   color: black;
 }
 
