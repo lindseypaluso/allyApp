@@ -9,7 +9,7 @@ This full-stack, MVC (Model-View-Controller) application allows you to create he
 Promote the well-being of communities by connecting organizations and individuals in combating racial inequalities and prejudice by providing resources to protect themselves and their loved ones.
 
 ## Deployed App
-You can view our deployed project by clicking <a href="https://ally-resources.herokuapp.com/">HERE</a>
+You can view our deployed project by clicking <a href="https://ally-resources.herokuapp.com/">HERE</a> or view a video demo of the app's functionality <a href="https://youtu.be/-wguloRb9Mw">HERE</a>
 
 To set up this application locally on your computer, perform the following steps:
 
