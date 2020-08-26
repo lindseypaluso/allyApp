@@ -97,32 +97,31 @@ After performing all of the setup steps, navigate to the project root directory 
 **Home Page** <br>
 The home page is where you will find our mission statement and a carousel of information about becoming an ally.
 
-![Home page](IMAGE LINK HERE)
+![Home page](./public/img/readme/home.png)
 
 **Library** <br>
 The library page is where you will be able to view media resources that educate about racial inequalities and filter them by category based on what kind of media you'd like to consume.
 
-![Library page](IMAGE LINK HERE)
-
-**Get Involved** <br>
-The Get Involved page is where allies can find ways to help those affected by racial inequalities.
-
-![Get Involved page](IMAGE LINK HERE)
+![Library page](./public/img/readme/library.png)
 
 **Petitions** <br>
 The Petitions page is where you can start your own petition or sign someone else's petition.
 
-![Petition page](IMAGE LINK HERE)
+![Petition page](./public/img/readme/petitions.png)
+![Petition page](./public/img/readme/Create-Petition.png)
 
 **Need Help?** <br>
 The Need Help page lets users struggling due to racial inequality post help requests for anyone willing to help. Once the users connect, they are able to message each other via their accounts to arrange for help.
 
-![Need Help page](IMAGE LINK HERE)
+![Need Help page](./public/img/readme/Need-Help.png)
+![Help Request](./public/img/readme/help_request.png)
+![Help Post](./public/img/readme/help_post.png)
+![Help Connect](./public/img/readme/connect.png)
 
 **Login System** <br>
 If you'd like to create an account (which is necessary for posting and messaging on the Need Help page), you can do so by clicking....... THIS NEEDS TO BE FINISHED
 
-![Login system](IMAGE LINK HERE)
+![Login system](./public/img/readme/home.png)
 
 ## Technologies Used
 ### Front-end Technologies 
