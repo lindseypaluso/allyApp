@@ -20,8 +20,8 @@ $(document).ready(function(){
             $('#petition_username').val(res.username).hide();
             $('.connect').show();
             $('.signature').show();
-            $('.help-login-protected').html('<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop">Submit Request for Help</button>');
-            $('.petition-login-protected').html('<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop">Create Petition</button>');
+            $('.help-login-protected').html('<button type="button" class="btn login-btn mb-4 mt-2" data-toggle="modal" data-target="#staticBackdrop">Submit Request for Help</button>');
+            $('.petition-login-protected').html('<button type="button" class="btn login-btn mb-4" data-toggle="modal" data-target="#staticBackdrop">Create Petition</button>');
           } 
       }
     });
